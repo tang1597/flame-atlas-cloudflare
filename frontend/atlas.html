@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07173F">
+  <title>Flame Atlas · Habitat fire atlas</title>
+  <link rel="stylesheet" href="brand-shared.css">
+  <link rel="stylesheet" href="atlas.css">
+  <script src="interactive_controls.js" defer></script>
+  <script src="workspace.js" defer></script>
+  <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="search_updates.css">
+</head>
+<body>
+  <a class="skip-link" href="#habitat-map">Skip to habitat map</a>
+  <main>
+    <section class="atlas-hero" aria-labelledby="atlas-title">
+      <div class="hero-copy"><h1 id="atlas-title">Fire safety across<br>space habitats.</h1><p>Choose a place, then a fire type.<br>Follow the evidence back to the experiments.</p></div>
+      <div class="map-instruction"><span class="instruction-dot" aria-hidden="true"></span><span>Select an illustrated habitat</span><span class="map-not-to-scale">Schematic · not to scale</span></div>
+      <div id="habitat-map" class="habitat-map" role="group" aria-label="Choose a habitat scenario from the illustrated space map">
+        <img class="atlas-overview" src="assets/habitat_fire_atlas.svg" width="1200" height="620" alt="A schematic habitat map with an ISS-style orbital station, crewed capsule, lunar base, Mars base and pressurized rover. Use the labeled buttons to explore research.">
+        <button type="button" class="habitat-node node-iss selected" data-habitat="space_station" aria-pressed="true" aria-controls="paper-list" aria-label="Explore ISS space station research">
+          <img class="mobile-scene" src="assets/space_station.svg" width="640" height="400" alt="" aria-hidden="true">
+          <span class="node-label">ISS space station <span class="selected-mark" aria-hidden="true">●</span></span>
+        </button>
+        <button type="button" class="habitat-node node-spacecraft" data-habitat="crew_spacecraft" aria-pressed="false" aria-controls="paper-list" aria-label="Explore a crewed spacecraft scenario">
+          <img class="mobile-scene" src="assets/crew_spacecraft.svg" width="640" height="400" alt="" aria-hidden="true">
+          <span class="node-label">Crewed spacecraft <span class="selected-mark" aria-hidden="true">●</span></span>
+        </button>
+        <button type="button" class="habitat-node node-lunar" data-habitat="lunar_base" aria-pressed="false" aria-controls="paper-list" aria-label="Explore a lunar base concept">
+          <img class="mobile-scene" src="assets/lunar_base.svg" width="640" height="400" alt="" aria-hidden="true">
+          <span class="node-label">Lunar base <span class="selected-mark" aria-hidden="true">●</span></span>
+        </button>
+        <button type="button" class="habitat-node node-mars" data-habitat="mars_base" aria-pressed="false" aria-controls="paper-list" aria-label="Explore a Mars base concept">
+          <img class="mobile-scene" src="assets/mars_base.svg" width="640" height="400" alt="" aria-hidden="true">
+          <span class="node-label">Mars base <span class="selected-mark" aria-hidden="true">●</span></span>
+        </button>
+        <button type="button" class="habitat-node node-rover" data-habitat="pressurized_rover" aria-pressed="false" aria-controls="paper-list" aria-label="Explore a pressurized rover scenario">
+          <img class="mobile-scene" src="assets/pressurized_rover.svg" width="640" height="400" alt="" aria-hidden="true">
+          <span class="node-label">Pressurized rover <span class="selected-mark" aria-hidden="true">●</span></span>
+        </button>
+      </div>
+      <div class="map-footer"><p>Illustrated scenarios, not operating configurations.</p><label for="rover-world">Rover context<select id="rover-world" name="world" aria-label="Rover context"><option value="moon" selected>Moon</option><option value="mars">Mars</option></select></label></div>
+    </section>
+
+    <section class="atlas-research scene-research" id="habitat-results" aria-labelledby="habitat-title">
+      <div class="research-heading"><div><p class="eyebrow">SELECTED SCENARIO</p><h2 id="habitat-title" tabindex="-1">ISS space station</h2><a href="#habitat-map">Back to map ↑</a></div></div>
+      <form id="keyword-form" class="keyword-form" role="search"><label for="research-keywords">Ask about combustion or fire safety</label><div class="keyword-row"><select id="fire-type-select" aria-label="Fire type"><option value="auto">All fire types</option><option value="solid_material_fire">Solid materials</option><option value="electrical_overheating_smoke">Electrical / smoke</option><option value="liquid_fuel_fire">Liquid fuels</option><option value="gaseous_fuel_fire">Gas systems</option></select><input id="research-keywords" type="search" maxlength="1000" placeholder="e.g. How does pressure affect a heptane cool flame?" autocomplete="off"><button type="submit">Search evidence <span aria-hidden="true">→</span></button></div></form>
+      <div id="keyword-options" class="keyword-options" aria-label="Suggested additional keywords"></div>
+      <section id="query-summary" class="query-summary" aria-labelledby="query-summary-title">
+        <h3 id="query-summary-title">AI summary</h3>
+        <p id="query-understanding" class="query-understanding" hidden></p>
+        <p id="query-overview" class="story-paragraph">Ask a research question to explore the evidence.</p>
+        <p id="query-takeaways" class="story-paragraph" hidden></p>
+        <details id="query-source-details" class="source-disclosure" hidden><summary id="query-source-toggle">Sources</summary><ol id="query-sources" class="query-sources"></ol><p id="query-method" class="method-note"></p><div id="query-actions" class="full-story"></div></details>
+      </section>
+      <div class="workspace-status"><p id="workspace-status" role="status" aria-live="polite">Loading reviewed evidence…</p><span id="ranking-method"></span></div>
+      <p id="workspace-error" role="alert" hidden></p><button id="retry-search" type="button" hidden>Retry search</button>
+      <div class="scene-workspace" id="research-workspace" aria-busy="true">
+        <section class="literature-column" aria-labelledby="literature-title"><div class="workspace-heading"><h3 id="literature-title">Relevant literature</h3><span id="paper-count"></span></div><ol id="paper-list" class="paper-list"></ol></section>
+        <section class="interpretation-column" aria-label="Selected literature interpretation">
+          <section id="combined-section" class="combined-section" aria-labelledby="combined-title" hidden><h3 id="combined-title">Combined fire-safety insight</h3><div id="combined-insights"></div></section>
+          <div id="selection-empty" class="selection-empty">Choose a paper to explore its evidence.</div>
+          <div id="selected-evidence" hidden>
+            <section class="evidence-brief"><h3>Selected source</h3><p id="selected-paper-title" class="selected-paper-title"></p><p id="ai-summary"></p><p id="source-lesson" class="source-lesson" hidden></p><details id="source-findings" class="source-disclosure"><summary>Source findings</summary><p id="summary-method" class="method-note">Reviewed evidence</p><ul id="key-findings" class="key-findings"></ul><div id="fire-insights" class="fire-insights"></div><div id="source-actions" class="source-actions"></div><p id="scenario-transfer" class="scenario-transfer"></p></details></section>
+            <section id="experiment-panel" class="experiment-panel"><div class="workspace-heading"><h3>Experiment & data</h3><label for="experiment-view" id="view-label" hidden>View<select id="experiment-view"></select></label></div><div id="experiment-schematic" class="experiment-schematic"></div><p id="experiment-status" class="experiment-status"></p><div id="quantitative-view" hidden><p id="chart-title" class="chart-title"></p><svg id="experiment-chart" viewBox="0 0 760 350" role="img" aria-label="Source observations and reviewed model comparison"></svg><div id="chart-legend" class="chart-legend"></div><div id="model-control" class="model-control" hidden><label id="model-input-label" for="model-input"></label><input id="model-input" type="range"><output id="model-output"></output></div><div id="extra-model-controls"></div><p id="model-comparison" class="model-comparison"></p><details><summary>Equation, source & comparison limits</summary><p id="chart-equation"></p><ul id="chart-limits"></ul></details></div></section>
+            <details class="paper-details"><summary>Abstract, evidence sources & limits</summary><p id="paper-abstract"></p><div id="paper-provenance"></div><ul id="paper-limits"></ul></details>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="atlas-footer"><span>Flame Atlas</span></footer>
+  </main>
+  <noscript><p class="noscript-note">Enable JavaScript to explore the habitat research catalog. The illustration is a scenario map, not a safety assessment.</p></noscript>
+  <p id="nasa-disclaimer" class="nasa-disclaimer" role="note">This independent project does not represent NASA’s views or imply NASA endorsement.</p>
+</body>
+</html>

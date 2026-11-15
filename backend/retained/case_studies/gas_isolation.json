@@ -1,0 +1,1327 @@
+{
+  "schema_version": "gas-isolation-public-source-case/1.0",
+  "case_id": "GAS-ISOLATION-FLASHBACK-CASE-V1",
+  "case_type": "source_bound_case_study",
+  "title": "Gas leak fire: source isolation, flashback and backdraft",
+  "summary": "Fuel supply can be a control pathway, but the mechanism, equipment, residual gas and responsible professional role must be established. This source-only case provides evidence and gaps, not scene instructions.",
+  "language": "en",
+  "condition_count": 8,
+  "situational_condition_count": 7,
+  "unknown_context_condition_count": 1,
+  "conditions_are_mutually_exclusive": false,
+  "condition_count_role": "Seven potentially overlapping situational conditions plus one unknown-context card; not eight matched validation experiments.",
+  "input_role": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision.",
+  "input_fields": [
+    {
+      "id": "gas_identity",
+      "type": "reported_text_or_null",
+      "default": null,
+      "label": "Reported gas identity or formulation",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "external_flame_at_release",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "External flame at a release reported?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "continuing_fuel_feed",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Continuing fuel feed reported?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "professional_isolation_plan",
+      "type": "reported_enum",
+      "allowed": [
+        "not_identified",
+        "identified_by_responsible_professional",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Responsible professional isolation plan identified?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "upstream_premixing_or_oxidizer_ingress",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Upstream fuel/air or oxygen mixing possible?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "heated_pressurized_equipment",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Heated pressurized equipment reported?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "chemical_instability_concern",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Gas-specific chemical instability concern?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "unignited_gas_possible",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Unignited residual gas possible?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "hot_oxygen_starved_enclosure",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Hot oxygen-starved enclosure reported?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    },
+    {
+      "id": "unburned_fuel_and_ignition_conditions",
+      "type": "reported_tristate",
+      "allowed": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "default": "unknown",
+      "label": "Unburned fuel and ignition conditions reported?",
+      "description": "Reported context only. A selection is not a verified measurement, hazard clearance, competence check or site-safe decision."
+    }
+  ],
+  "unknown_numeric_fields": {
+    "leak_rate": null,
+    "supply_pressure": null,
+    "gas_temperature": null,
+    "oxygen_fraction": null,
+    "valve_closure_time": null,
+    "residual_inventory": null,
+    "safe_temperature": null,
+    "suppression_dose": null,
+    "safe_concentration": null,
+    "success_probability": null
+  },
+  "conditions": [
+    {
+      "id": "context_unknown",
+      "title": "Context not yet established",
+      "condition": "Gas identity, upstream mixing, source continuity, equipment or enclosure state is not established.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "The evidence supports identifying the mechanism and responsible professional role before choosing an intervention category.",
+          "role": "unknown",
+          "source_ids": [
+            "PHMSA_PIPELINE_PUBLIC",
+            "HSE_HSG139",
+            "NIST_TN2185"
+          ]
+        },
+        {
+          "text": "Responsible role: Competent gas-system operator and incident professionals appropriate to the actual installation.",
+          "role": "unknown",
+          "source_ids": [
+            "PHMSA_PIPELINE_PUBLIC",
+            "HSE_HSG139",
+            "NIST_TN2185"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "A visible external flame does not exclude a separate upstream mixture, heated vessel or residual cloud.",
+          "role": "unknown",
+          "source_ids": [
+            "PHMSA_PIPELINE_PUBLIC",
+            "HSE_HSG139",
+            "NIST_TN2185"
+          ]
+        }
+      ],
+      "evidence_grade": "unknown",
+      "gaps": [
+        "Material identity/formulation and stability",
+        "Supply topology and measured leak continuity",
+        "Enclosure, heat and ignition history"
+      ],
+      "source_ids": [
+        "PHMSA_PIPELINE_PUBLIC",
+        "HSE_HSG139",
+        "NIST_TN2185"
+      ],
+      "source_locators": [
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Not to Do in the Event a Leak Were to Occur",
+          "locator": "What Not to Do in the Event a Leak Were to Occur",
+          "claim": "Public role excludes operating pipeline valves or attempting to extinguish a natural gas fire."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Does the Pipeline Company Do in the Event of a Leak",
+          "locator": "What Does the Pipeline Company Do in the Event of a Leak",
+          "claim": "Trained pipeline personnel handle isolation and release minimization."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 7,
+          "section": null,
+          "locator": "Physical PDF page 7; Paragraph 6",
+          "claim": "Upstream fuel/air or fuel/oxygen mixtures and backfeeding; separate acetylene decomposition without air/oxygen."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 11,
+          "section": null,
+          "locator": "Physical PDF page 11; Paragraph 26",
+          "claim": "Isolation, non-return and flame-arresting functions are distinct."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 17,
+          "section": null,
+          "locator": "Physical PDF page 17; Paragraphs 46, 47",
+          "claim": "Non-return protection concerns reverse flow and mixture formation."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 18,
+          "section": null,
+          "locator": "Physical PDF page 18; Paragraph 48",
+          "claim": "Arrester protection depends on mechanism and installation context."
+        },
+        {
+          "source_id": "NIST_TN2185",
+          "pdf_page": 4,
+          "section": "Abstract",
+          "locator": "Physical PDF page 4; Abstract",
+          "claim": "Primary reduced-scale compartment measurements of temperature and mixture composition."
+        },
+        {
+          "source_id": "NIST_TN2185",
+          "pdf_page": 9,
+          "section": "1. Introduction",
+          "locator": "Physical PDF page 9; 1. Introduction",
+          "claim": "Hot oxygen-starved enclosure, substantial unburned fuel, incoming air/mixing and ignition conditions define the mechanism."
+        }
+      ],
+      "unknowns": [
+        "Which of the remaining conditions apply",
+        "Actual containment and isolation state"
+      ],
+      "not_established": [
+        "Unknown is not a negative hazard label.",
+        "This card does not certify a scene as safe."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "external_leak_isolation_unknown",
+      "title": "Continuously fed external leak: isolation unconfirmed",
+      "condition": "An external flame at a release is reported; continuing feed is reported or unknown; professional isolation capability is unconfirmed.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "Removing or limiting continuing fuel supply is a relevant prevention/control principle. Flame extinction alone can leave an unburned release.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "ERG2024_GUIDE115_NOAA",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        },
+        {
+          "text": "Responsible role: Responsible operator and trained incident responders; public pipeline awareness is not an operator procedure.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "ERG2024_GUIDE115_NOAA",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "Residual gas may accumulate and ignite later.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "ERG2024_GUIDE115_NOAA",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        },
+        {
+          "text": "Impingement can continue to damage nearby equipment.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "ERG2024_GUIDE115_NOAA",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        }
+      ],
+      "evidence_grade": "official_guidance",
+      "gaps": [
+        "Verified supply isolation feasibility",
+        "Leak geometry, rate and upstream inventory",
+        "Residual release and post-flame atmosphere"
+      ],
+      "source_ids": [
+        "HSE_JET_STRATEGY",
+        "ERG2024_GUIDE115_NOAA",
+        "PHMSA_PIPELINE_PUBLIC"
+      ],
+      "source_locators": [
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 12,
+          "section": "Ignition",
+          "locator": "Physical PDF page 12; Ignition",
+          "claim": "Early and delayed ignition have different consequences."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 29,
+          "section": "Jet Fires: Background",
+          "locator": "Physical PDF page 29; Jet Fires: Background",
+          "claim": "Continuously fed momentum-driven release; turbulent diffusion flame."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 31,
+          "section": "Jet Fires",
+          "locator": "Physical PDF page 31; Jet Fires",
+          "claim": "Extinction before fuel cutoff can introduce an explosion hazard."
+        },
+        {
+          "source_id": "ERG2024_GUIDE115_NOAA",
+          "pdf_page": null,
+          "section": "Response Recommendations > Firefighting",
+          "locator": "Response Recommendations > Firefighting",
+          "claim": "ERG 2024 Guide 115 links extinguishment of a leaking gas fire to whether the leak can be stopped."
+        },
+        {
+          "source_id": "ERG2024_GUIDE115_NOAA",
+          "pdf_page": null,
+          "section": "General Description",
+          "locator": "General Description",
+          "claim": "The methane entry describes container rupture under prolonged fire or intense heat."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Not to Do in the Event a Leak Were to Occur",
+          "locator": "What Not to Do in the Event a Leak Were to Occur",
+          "claim": "Public role excludes operating pipeline valves or attempting to extinguish a natural gas fire."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Does the Pipeline Company Do in the Event of a Leak",
+          "locator": "What Does the Pipeline Company Do in the Event of a Leak",
+          "claim": "Trained pipeline personnel handle isolation and release minimization."
+        }
+      ],
+      "unknowns": [
+        "Whether feed has stopped",
+        "Whether the release is methane or another gas"
+      ],
+      "not_established": [
+        "No instruction to extinguish or operate a valve.",
+        "No claim that cooling or oxygen reduction are the only possible control mechanisms."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "external_leak_professional_isolation_candidate",
+      "title": "External leak: professional isolation plan identified",
+      "condition": "A competent responsible operator reports an applicable source-isolation plan. Actual isolation and residual flow remain unverified.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "Engineered upstream isolation can reduce the released inventory. A reported plan is a candidate for professional assessment, not permission or evidence of success.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_EMERGENCY_ISOLATION",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        },
+        {
+          "text": "Responsible role: Responsible trained operator under the installation-specific incident plan.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_EMERGENCY_ISOLATION",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "Interconnected supply paths or trapped inventory may sustain release.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_EMERGENCY_ISOLATION",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        },
+        {
+          "text": "Isolation arrangements may introduce separate plant hazards.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_EMERGENCY_ISOLATION",
+            "PHMSA_PIPELINE_PUBLIC"
+          ]
+        }
+      ],
+      "evidence_grade": "official_guidance",
+      "gaps": [
+        "Applicable operator/site plan and authority",
+        "Synchronized measured flow, pressure and isolation state",
+        "Post-isolation fire and residual-cloud observations"
+      ],
+      "source_ids": [
+        "HSE_EMERGENCY_ISOLATION",
+        "PHMSA_PIPELINE_PUBLIC"
+      ],
+      "source_locators": [
+        {
+          "source_id": "HSE_EMERGENCY_ISOLATION",
+          "pdf_page": null,
+          "section": "Emergency Isolation: introductory paragraphs before Linking the Predictive aspects to the Technical Measures",
+          "locator": "Emergency Isolation: introductory paragraphs before Linking the Predictive aspects to the Technical Measures",
+          "claim": "Following a containment breach, isolating upstream inventory can reduce released quantity; complex connected plant and isolation systems can introduce other hazards."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Not to Do in the Event a Leak Were to Occur",
+          "locator": "What Not to Do in the Event a Leak Were to Occur",
+          "claim": "Public role excludes operating pipeline valves or attempting to extinguish a natural gas fire."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Does the Pipeline Company Do in the Event of a Leak",
+          "locator": "What Does the Pipeline Company Do in the Event of a Leak",
+          "claim": "Trained pipeline personnel handle isolation and release minimization."
+        }
+      ],
+      "unknowns": [
+        "Physical isolation success and timing",
+        "Residual inventory and alternative feed paths"
+      ],
+      "not_established": [
+        "No universal closing sequence.",
+        "A UI selection is not proof of competence or safe execution."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "upstream_premixing_possible",
+      "title": "Upstream fuel/air or fuel/oxygen mixture possible",
+      "condition": "Premixed or oxyfuel equipment, reverse flow, or upstream oxidizer ingress is reported or remains a credible unresolved configuration.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "Upstream flashback involves a combustible upstream mixture in the cited equipment context. Backflow prevention, flame arresting and isolation have distinct functions.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139",
+            "OSHA_1910_253"
+          ]
+        },
+        {
+          "text": "Responsible role: Competent personnel responsible for the specific oxyfuel or gas system.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139",
+            "OSHA_1910_253"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "Upstream flame propagation or equipment damage.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139",
+            "OSHA_1910_253"
+          ]
+        },
+        {
+          "text": "A flow disturbance may interact with the equipment configuration.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139",
+            "OSHA_1910_253"
+          ]
+        }
+      ],
+      "evidence_grade": "official_guidance",
+      "gaps": [
+        "Actual upstream composition and topology",
+        "Protective-device function and suitability",
+        "Direct flame-propagation/event evidence"
+      ],
+      "source_ids": [
+        "HSE_INDG297",
+        "HSE_HSG139",
+        "OSHA_1910_253"
+      ],
+      "source_locators": [
+        {
+          "source_id": "HSE_INDG297",
+          "pdf_page": 6,
+          "section": "Backfires and flashbacks",
+          "locator": "Physical PDF page 6; Backfires and flashbacks",
+          "claim": "Reverse oxygen/fuel flow can form an upstream explosive mixture; non-return protection is distinct from stopping an established flashback."
+        },
+        {
+          "source_id": "HSE_INDG297",
+          "pdf_page": 7,
+          "section": "Protecting cylinders from flashbacks",
+          "locator": "Physical PDF page 7; Protecting cylinders from flashbacks",
+          "claim": "Acetylene exposed to fire/flashback can decompose; acetylene-specific warning."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 7,
+          "section": null,
+          "locator": "Physical PDF page 7; Paragraph 6",
+          "claim": "Upstream fuel/air or fuel/oxygen mixtures and backfeeding; separate acetylene decomposition without air/oxygen."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 11,
+          "section": null,
+          "locator": "Physical PDF page 11; Paragraph 26",
+          "claim": "Isolation, non-return and flame-arresting functions are distinct."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 17,
+          "section": null,
+          "locator": "Physical PDF page 17; Paragraphs 46, 47",
+          "claim": "Non-return protection concerns reverse flow and mixture formation."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 18,
+          "section": null,
+          "locator": "Physical PDF page 18; Paragraph 48",
+          "claim": "Arrester protection depends on mechanism and installation context."
+        },
+        {
+          "source_id": "OSHA_1910_253",
+          "pdf_page": null,
+          "section": "1910.253(a)(1), (a)(4)",
+          "locator": "1910.253(a)(1), (a)(4)",
+          "claim": "Premixture hazards and competent personnel in occupational oxyfuel equipment."
+        },
+        {
+          "source_id": "OSHA_1910_253",
+          "pdf_page": null,
+          "section": "1910.253(e)(3)(ii)(A)-(C), (C)(2)-(3)",
+          "locator": "1910.253(e)(3)(ii)(A)-(C), (C)(2)-(3)",
+          "claim": "Backflow, flame passage and oxygen backpressure are separate protective functions."
+        }
+      ],
+      "unknowns": [
+        "Whether a flammable upstream mixture exists",
+        "Actual protective-device state"
+      ],
+      "not_established": [
+        "Closing a valve is not universally a cause of flashback.",
+        "An external diffusion flame alone does not prove upstream premixing.",
+        "No arrester design or test procedure is supplied."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "heated_pressurized_vessel",
+      "title": "Heated pressurized vessel or connected equipment",
+      "condition": "A pressurized container or connected system is reported to be exposed to fire or intense heat.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "Heat exposure can create a vessel/structure escalation problem distinct from the visible flame. The cited methane entry describes container rupture under heat.",
+          "role": "guidance",
+          "source_ids": [
+            "ERG2024_GUIDE115_NOAA",
+            "HSE_JET_STRATEGY"
+          ]
+        },
+        {
+          "text": "Responsible role: Trained incident professionals with the responsible equipment operator.",
+          "role": "guidance",
+          "source_ids": [
+            "ERG2024_GUIDE115_NOAA",
+            "HSE_JET_STRATEGY"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "Loss of containment or vessel rupture.",
+          "role": "guidance",
+          "source_ids": [
+            "ERG2024_GUIDE115_NOAA",
+            "HSE_JET_STRATEGY"
+          ]
+        },
+        {
+          "text": "A separate unstable-gas mechanism may coexist.",
+          "role": "guidance",
+          "source_ids": [
+            "ERG2024_GUIDE115_NOAA",
+            "HSE_JET_STRATEGY"
+          ]
+        }
+      ],
+      "evidence_grade": "official_guidance",
+      "gaps": [
+        "Gas identity, vessel design and integrity",
+        "Pressure and heat-exposure history",
+        "Applicable responder/operator assessment"
+      ],
+      "source_ids": [
+        "ERG2024_GUIDE115_NOAA",
+        "HSE_JET_STRATEGY"
+      ],
+      "source_locators": [
+        {
+          "source_id": "ERG2024_GUIDE115_NOAA",
+          "pdf_page": null,
+          "section": "Response Recommendations > Firefighting",
+          "locator": "Response Recommendations > Firefighting",
+          "claim": "ERG 2024 Guide 115 links extinguishment of a leaking gas fire to whether the leak can be stopped."
+        },
+        {
+          "source_id": "ERG2024_GUIDE115_NOAA",
+          "pdf_page": null,
+          "section": "General Description",
+          "locator": "General Description",
+          "claim": "The methane entry describes container rupture under prolonged fire or intense heat."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 12,
+          "section": "Ignition",
+          "locator": "Physical PDF page 12; Ignition",
+          "claim": "Early and delayed ignition have different consequences."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 29,
+          "section": "Jet Fires: Background",
+          "locator": "Physical PDF page 29; Jet Fires: Background",
+          "claim": "Continuously fed momentum-driven release; turbulent diffusion flame."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 31,
+          "section": "Jet Fires",
+          "locator": "Physical PDF page 31; Jet Fires",
+          "claim": "Extinction before fuel cutoff can introduce an explosion hazard."
+        }
+      ],
+      "unknowns": [
+        "Actual vessel thermal and mechanical condition",
+        "Whether decomposition is a separate chemical concern"
+      ],
+      "not_established": [
+        "No universal temperature, distance or exposure-time limit.",
+        "The methane entry does not quantify every gas/vessel combination."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "unstable_gas",
+      "title": "Acetylene or another chemically unstable gas: special assessment",
+      "condition": "Acetylene is identified, or a specific chemical-instability concern is reported; an unidentified gas does not establish stability.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "The cited acetylene guidance describes decomposition without an air/oxygen mixture. This is an explicit exception to a broad pure-fuel/no-internal-hazard inference.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139"
+          ]
+        },
+        {
+          "text": "Responsible role: Gas-specific competent operator and incident professionals.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "Decomposition or escalation can differ from ordinary upstream mixture flashback.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_INDG297",
+            "HSE_HSG139"
+          ]
+        }
+      ],
+      "evidence_grade": "official_guidance",
+      "gaps": [
+        "Confirmed chemical identity and formulation",
+        "Gas-specific stability and exposure evidence",
+        "Equipment-specific professional assessment"
+      ],
+      "source_ids": [
+        "HSE_INDG297",
+        "HSE_HSG139"
+      ],
+      "source_locators": [
+        {
+          "source_id": "HSE_INDG297",
+          "pdf_page": 6,
+          "section": "Backfires and flashbacks",
+          "locator": "Physical PDF page 6; Backfires and flashbacks",
+          "claim": "Reverse oxygen/fuel flow can form an upstream explosive mixture; non-return protection is distinct from stopping an established flashback."
+        },
+        {
+          "source_id": "HSE_INDG297",
+          "pdf_page": 7,
+          "section": "Protecting cylinders from flashbacks",
+          "locator": "Physical PDF page 7; Protecting cylinders from flashbacks",
+          "claim": "Acetylene exposed to fire/flashback can decompose; acetylene-specific warning."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 7,
+          "section": null,
+          "locator": "Physical PDF page 7; Paragraph 6",
+          "claim": "Upstream fuel/air or fuel/oxygen mixtures and backfeeding; separate acetylene decomposition without air/oxygen."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 11,
+          "section": null,
+          "locator": "Physical PDF page 11; Paragraph 26",
+          "claim": "Isolation, non-return and flame-arresting functions are distinct."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 17,
+          "section": null,
+          "locator": "Physical PDF page 17; Paragraphs 46, 47",
+          "claim": "Non-return protection concerns reverse flow and mixture formation."
+        },
+        {
+          "source_id": "HSE_HSG139",
+          "pdf_page": 18,
+          "section": null,
+          "locator": "Physical PDF page 18; Paragraph 48",
+          "claim": "Arrester protection depends on mechanism and installation context."
+        }
+      ],
+      "unknowns": [
+        "Chemical stability if identity is unresolved",
+        "Whether the acetylene-specific mechanism applies"
+      ],
+      "not_established": [
+        "Do not generalize acetylene decomposition to every pure fuel.",
+        "Do not infer all pure fuel systems are internally hazard-free."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "unignited_residual_cloud",
+      "title": "Unignited residual or continuing gas cloud",
+      "condition": "An unburned release or residual cloud is reported or possible, including after loss of visible flame.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "Loss of visible flame does not demonstrate stopped leakage or a nonflammable atmosphere. Delayed ignition consequences depend on release and confinement context.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "PHMSA_PIPELINE_PUBLIC",
+            "ERG2024_GUIDE115_NOAA"
+          ]
+        },
+        {
+          "text": "Responsible role: Qualified incident responders and responsible operator.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "PHMSA_PIPELINE_PUBLIC",
+            "ERG2024_GUIDE115_NOAA"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "Flash fire or explosion after delayed ignition.",
+          "role": "guidance",
+          "source_ids": [
+            "HSE_JET_STRATEGY",
+            "PHMSA_PIPELINE_PUBLIC",
+            "ERG2024_GUIDE115_NOAA"
+          ]
+        }
+      ],
+      "evidence_grade": "official_guidance",
+      "gaps": [
+        "Measured release status and atmosphere",
+        "Composition, dispersion, confinement and ignition history"
+      ],
+      "source_ids": [
+        "HSE_JET_STRATEGY",
+        "PHMSA_PIPELINE_PUBLIC",
+        "ERG2024_GUIDE115_NOAA"
+      ],
+      "source_locators": [
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 12,
+          "section": "Ignition",
+          "locator": "Physical PDF page 12; Ignition",
+          "claim": "Early and delayed ignition have different consequences."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 29,
+          "section": "Jet Fires: Background",
+          "locator": "Physical PDF page 29; Jet Fires: Background",
+          "claim": "Continuously fed momentum-driven release; turbulent diffusion flame."
+        },
+        {
+          "source_id": "HSE_JET_STRATEGY",
+          "pdf_page": 31,
+          "section": "Jet Fires",
+          "locator": "Physical PDF page 31; Jet Fires",
+          "claim": "Extinction before fuel cutoff can introduce an explosion hazard."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Not to Do in the Event a Leak Were to Occur",
+          "locator": "What Not to Do in the Event a Leak Were to Occur",
+          "claim": "Public role excludes operating pipeline valves or attempting to extinguish a natural gas fire."
+        },
+        {
+          "source_id": "PHMSA_PIPELINE_PUBLIC",
+          "pdf_page": null,
+          "section": "What Does the Pipeline Company Do in the Event of a Leak",
+          "locator": "What Does the Pipeline Company Do in the Event of a Leak",
+          "claim": "Trained pipeline personnel handle isolation and release minimization."
+        },
+        {
+          "source_id": "ERG2024_GUIDE115_NOAA",
+          "pdf_page": null,
+          "section": "Response Recommendations > Firefighting",
+          "locator": "Response Recommendations > Firefighting",
+          "claim": "ERG 2024 Guide 115 links extinguishment of a leaking gas fire to whether the leak can be stopped."
+        },
+        {
+          "source_id": "ERG2024_GUIDE115_NOAA",
+          "pdf_page": null,
+          "section": "General Description",
+          "locator": "General Description",
+          "claim": "The methane entry describes container rupture under prolonged fire or intense heat."
+        }
+      ],
+      "unknowns": [
+        "Cloud extent and local composition",
+        "Whether feed persists"
+      ],
+      "not_established": [
+        "No probability, clearance time or universal concentration threshold.",
+        "No ventilation or ignition-control procedure is prescribed."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    },
+    {
+      "id": "hot_oxygen_starved_enclosure",
+      "title": "Hot oxygen-starved enclosure containing unburned fuel",
+      "condition": "A heated, oxygen-starved enclosure with substantial unburned fuel and possible ignition is reported; incoming air/mixing is relevant.",
+      "context_role": "Descriptive condition; no automatic scene classification or operational approval.",
+      "intervention_basis": [
+        {
+          "text": "NIST documents a compartment backdraft mechanism involving air entry/mixing and ignition. It is distinct from upstream pipe flashback.",
+          "role": "related_experiment",
+          "source_ids": [
+            "NIST_TN2185"
+          ]
+        },
+        {
+          "text": "Responsible role: Qualified fire/incident professionals; source is a primary research report, not a scene protocol.",
+          "role": "related_experiment",
+          "source_ids": [
+            "NIST_TN2185"
+          ]
+        }
+      ],
+      "secondary_risks": [
+        {
+          "text": "A local flammable mixture can deflagrate and generate an extending flame/pressure wave.",
+          "role": "related_experiment",
+          "source_ids": [
+            "NIST_TN2185"
+          ]
+        }
+      ],
+      "evidence_grade": "related_experiment",
+      "gaps": [
+        "Spatial temperature, oxygen and fuel-composition history",
+        "Opening/mixing and ignition conditions",
+        "Geometry and scale matched to the actual enclosure"
+      ],
+      "source_ids": [
+        "NIST_TN2185"
+      ],
+      "source_locators": [
+        {
+          "source_id": "NIST_TN2185",
+          "pdf_page": 4,
+          "section": "Abstract",
+          "locator": "Physical PDF page 4; Abstract",
+          "claim": "Primary reduced-scale compartment measurements of temperature and mixture composition."
+        },
+        {
+          "source_id": "NIST_TN2185",
+          "pdf_page": 9,
+          "section": "1. Introduction",
+          "locator": "Physical PDF page 9; 1. Introduction",
+          "claim": "Hot oxygen-starved enclosure, substantial unburned fuel, incoming air/mixing and ignition conditions define the mechanism."
+        }
+      ],
+      "unknowns": [
+        "Whether all required mechanism conditions coexist",
+        "Whether the reduced-scale experiment represents this enclosure"
+      ],
+      "not_established": [
+        "Low oxygen alone is not a backdraft diagnosis.",
+        "No instruction to open, ventilate or deoxygenate a compartment.",
+        "No universal onset threshold or transferred probability."
+      ],
+      "field_procedure": null,
+      "numeric_safe_threshold": null,
+      "intervention_success_probability": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "HSE_JET_STRATEGY",
+      "title": "Fire and Explosion Strategy, Issue 1",
+      "authority": "UK Health and Safety Executive, OffshoreDivision",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://www.hse.gov.uk/Offshore/assets/docs/fireexplosion.pdf",
+      "doi": null,
+      "pdf_page": 12,
+      "pdf_pages": [
+        12,
+        29,
+        31
+      ],
+      "section": "Ignition; Jet Fires: Background; Jet Fires",
+      "edition": "Issue1; publicationdate not independently established; historical strategy source, not a newly verified current design standard",
+      "scope": "Offshore hydrocarbon release and fire hazards; mechanism definitions and escalation context. No threshold from this document is adopted.",
+      "sha256": null,
+      "local_pdf_url": null,
+      "direct_page_links": [
+        {
+          "physical_pdf_page": 12,
+          "url": "https://www.hse.gov.uk/Offshore/assets/docs/fireexplosion.pdf#page=12"
+        },
+        {
+          "physical_pdf_page": 29,
+          "url": "https://www.hse.gov.uk/Offshore/assets/docs/fireexplosion.pdf#page=29"
+        },
+        {
+          "physical_pdf_page": 31,
+          "url": "https://www.hse.gov.uk/Offshore/assets/docs/fireexplosion.pdf#page=31"
+        }
+      ],
+      "access": "Official remote source reviewed; no exact local payload hash is asserted.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "PHMSA_PIPELINE_PUBLIC",
+      "title": "Pipeline Leak Recognition and What to Do",
+      "authority": "US Department of Transportation, PHMSA",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://www.phmsa.dot.gov/safety-awareness/pipeline/pipeline-leak-recognition-and-what-do",
+      "doi": null,
+      "pdf_page": null,
+      "pdf_pages": [],
+      "section": "What Not to Do in the Event a Leak Were to Occur; What Does the Pipeline Company Do in the Event of a Leak",
+      "edition": "Official HTML; page states last updated May 25, 2017; currently served URL checked this round.",
+      "scope": "Public pipeline-emergency awareness; distinct from trained operator procedures or an instruction to manipulate a particular valve.",
+      "sha256": null,
+      "local_pdf_url": null,
+      "direct_page_links": [],
+      "access": "Official remote source reviewed; no exact local payload hash is asserted.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "ERG2024_GUIDE115_NOAA",
+      "title": "ERG 2024 Guide 115: Gases - Flammable (Including Refrigerated Liquids), NOAA CAMEO methane excerpt",
+      "authority": "PHMSA/DOT EmergencyResponseGuidebook, reproduced by NOAA CAMEO",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://cameochemicals.noaa.gov/chemical/8823",
+      "doi": null,
+      "pdf_page": null,
+      "pdf_pages": [],
+      "section": "Response Recommendations > Firefighting; General Description",
+      "edition": "Explicit ERG 2024 attribution in official NOAA HTML; full PHMSA PDF was not downloaded.",
+      "scope": "Initial phase of hazardous-material transportation incidents; not a complete fixed-facility, pipeline or spacecraft emergency plan. Methane is one referenced flammable gas.",
+      "sha256": null,
+      "local_pdf_url": null,
+      "direct_page_links": [],
+      "access": "Official remote source reviewed; no exact local payload hash is asserted.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "HSE_INDG297",
+      "title": "Safety in gas welding, cutting and similar processes",
+      "authority": "UK Health and Safety Executive",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://www.hse.gov.uk/pubns/indg297.pdf",
+      "doi": null,
+      "pdf_page": 6,
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "section": "Backfires and flashbacks; Protecting cylinders from flashbacks",
+      "edition": "INDG297(rev1),publishedMay2012;11physicalpages",
+      "scope": "Portable compressed-gas oxyfuel welding and cutting equipment; not a pipeline gas-fire procedure.",
+      "sha256": "38bc112877f88487d84367045b82be3f8ba46042879e506e1b5bc164668d498b",
+      "local_pdf_url": null,
+      "direct_page_links": [
+        {
+          "physical_pdf_page": 6,
+          "url": "https://www.hse.gov.uk/pubns/indg297.pdf#page=6"
+        },
+        {
+          "physical_pdf_page": 7,
+          "url": "https://www.hse.gov.uk/pubns/indg297.pdf#page=7"
+        }
+      ],
+      "access": "Exact local edition pinned by the release coordinator; PDF not embedded in this case asset.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "HSE_HSG139",
+      "title": "The safe use of compressed gases in welding, flame cutting and allied processes",
+      "authority": "UK Health and Safety Executive",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg139.pdf",
+      "doi": null,
+      "pdf_page": 7,
+      "pdf_pages": [
+        7,
+        11,
+        17,
+        18
+      ],
+      "section": null,
+      "edition": "Firstedition1997;officialwebfriendly43-pageeditionlists2002amendments and reprints through2009. Historicalguidance, not a newly audited currentequipmentstandard.",
+      "scope": "Industrial compressed-gas welding/cutting equipment and distribution; design-function explanations only here, not installation instructions.",
+      "sha256": null,
+      "local_pdf_url": null,
+      "direct_page_links": [
+        {
+          "physical_pdf_page": 7,
+          "url": "https://www.hse.gov.uk/pubns/priced/hsg139.pdf#page=7"
+        },
+        {
+          "physical_pdf_page": 11,
+          "url": "https://www.hse.gov.uk/pubns/priced/hsg139.pdf#page=11"
+        },
+        {
+          "physical_pdf_page": 17,
+          "url": "https://www.hse.gov.uk/pubns/priced/hsg139.pdf#page=17"
+        },
+        {
+          "physical_pdf_page": 18,
+          "url": "https://www.hse.gov.uk/pubns/priced/hsg139.pdf#page=18"
+        }
+      ],
+      "access": "Official remote source reviewed; no exact local payload hash is asserted.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "OSHA_1910_253",
+      "title": "29 CFR 1910.253: Oxygen-fuel gas welding and cutting",
+      "authority": "US OSHA",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.253",
+      "doi": null,
+      "pdf_page": null,
+      "pdf_pages": [],
+      "section": "1910.253(a)(1), (a)(4); 1910.253(e)(3)(ii)(A)-(C), (C)(2)-(3)",
+      "edition": "Official HTML regulation; no PDF physical-page locator or independently assigned book edition.",
+      "scope": "US occupational oxygen-fuel welding/cutting standard; not a general natural-gas pipeline protocol or an automatic rule for the local jurisdiction.",
+      "sha256": null,
+      "local_pdf_url": null,
+      "direct_page_links": [],
+      "access": "Official remote source reviewed; no exact local payload hash is asserted.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "NIST_TN2185",
+      "title": "Thermal and gas mixture composition measurements preceding backdrafts in a 2/5th scale compartment",
+      "authority": "US NIST,FireResearchDivision",
+      "role": "related_experiment",
+      "source_role": "primary_experiment",
+      "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2185.pdf",
+      "doi": "10.6028/NIST.TN.2185",
+      "pdf_page": 4,
+      "pdf_pages": [
+        4,
+        9
+      ],
+      "section": "Abstract; 1. Introduction",
+      "edition": "NIST Technical Note 2185, September 2022; 52 physical PDF pages.",
+      "scope": "Primary reduced-scale heated-compartment experiments with methane, propane and propylene; not pipe-flashback tests or spacecraft-suppression qualification.",
+      "sha256": "6a023ab743d841407e7d619e4e92756a940731450a10063f5c5a591e5784b4a9",
+      "local_pdf_url": null,
+      "direct_page_links": [
+        {
+          "physical_pdf_page": 4,
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=933563#page=4"
+        },
+        {
+          "physical_pdf_page": 9,
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=933563#page=9"
+        }
+      ],
+      "access": "Exact local edition pinned by the release coordinator; PDF not embedded in this case asset.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "HSE_EMERGENCY_ISOLATION",
+      "title": "Emergency Isolation",
+      "authority": "UK Health and Safety Executive",
+      "role": "guidance",
+      "source_role": "official_guidance",
+      "url": "https://www.hse.gov.uk/comah/sragtech/techmeasisolatio.htm",
+      "doi": null,
+      "pdf_page": null,
+      "pdf_pages": [],
+      "section": "Emergency Isolation: introductory paragraphs before Linking the Predictive aspects to the Technical Measures",
+      "edition": "Official COMAH Technical Measures Document HTML; publication/revision date not established.",
+      "scope": "COMAH plant engineering after breach of containment; excludes routine maintenance isolation. Not an on-scene valve sequence.",
+      "sha256": null,
+      "local_pdf_url": null,
+      "direct_page_links": [],
+      "access": "Official remote source reviewed; no exact local payload hash is asserted.",
+      "quote_policy": "No new direct quotation; prior source ledger remains authoritative."
+    },
+    {
+      "id": "D-BRE-D22",
+      "title": "Burning Emulations of Condensed Phase Fuels Aboard the International Space Station",
+      "authority": "University of Maryland doctoral dissertation",
+      "role": "related_experiment",
+      "source_role": "NASA-related source event and protocol context",
+      "url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/737cc34c-44b2-40c3-ab77-14bf9569edd8/content",
+      "doi": null,
+      "pdf_page": 111,
+      "pdf_pages": [
+        32,
+        110,
+        111,
+        149
+      ],
+      "section": "Source event classification and protocol interpretation; experimental records retained offline.",
+      "edition": "ParhamDehghani,PhDUniversityofMaryland2022;171physicalpages",
+      "scope": "Qualitative programmed-flow-stop and censoring example; not industrial leak isolation, flashback or suppression performance.",
+      "sha256": "2ada277f4accf3ff7dca0c4701609480a32c76141fe008d8253c341848b28cf0",
+      "local_pdf_url": null,
+      "direct_page_links": [],
+      "access": "Previously reviewed exact local source identity; no experimental rows are included here.",
+      "quote_policy": "No direct quotation added."
+    },
+    {
+      "id": "D-BRE-GUIDE22",
+      "title": "ACME/BRE Data Interpretation",
+      "authority": "NASA ACME/BRE investigator interpretation guide",
+      "role": "related_experiment",
+      "source_role": "NASA-related source event and protocol context",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20",
+      "doi": null,
+      "pdf_page": 20,
+      "pdf_pages": [
+        6,
+        9,
+        10,
+        19,
+        20
+      ],
+      "section": "Source event classification and protocol interpretation; experimental records retained offline.",
+      "edition": "Dennis P.Stocker,4August2022; later running headers retain s-Flame20September2021",
+      "scope": "Qualitative programmed-flow-stop and censoring example; not industrial leak isolation, flashback or suppression performance.",
+      "sha256": "6187d07f3adddee48f309bf4a537b98ed81840e6c89810b097f9d55f6e5bd9d0",
+      "local_pdf_url": null,
+      "direct_page_links": [],
+      "access": "Previously reviewed exact local source identity; no experimental rows are included here.",
+      "quote_policy": "No direct quotation added."
+    }
+  ],
+  "related_records": [
+    {
+      "id": "NASA_BRE_PROGRAMMED_FLOW_STOP",
+      "title": "Related NASA BRE event: a command is not verified isolation",
+      "study": "PSI-20",
+      "role": "related_experiment",
+      "scope": "A reviewed gas-emulator record distinguishes programmed fuel-flow termination from a confirmed natural-extinction event. It does not establish physical valve closure, measured release cessation, flashback protection or intervention performance.",
+      "source_ids": [
+        "D-BRE-D22",
+        "D-BRE-GUIDE22"
+      ],
+      "source_locators": [
+        {
+          "source_id": "D-BRE-D22",
+          "pdf_page": 111,
+          "section": "Table 6.1 event classification"
+        },
+        {
+          "source_id": "D-BRE-GUIDE22",
+          "pdf_page": 20,
+          "section": "Archived command and event interpretation"
+        }
+      ],
+      "limits": [
+        "This is related laboratory/flight research, not a pressurized industrial leak or valve-system test.",
+        "Experimental measurements, command timestamps and raw bindings remain in the offline review.",
+        "A commanded stop does not independently establish flame persistence, valve closure, flow-off or post-shutdown reignition outcome."
+      ],
+      "field_procedure": null
+    }
+  ],
+  "limits": [
+    "External diffusion jet fire, upstream premixed/oxyfuel flashback and compartment backdraft are different mechanisms.",
+    "Neither valve closure always causes flashback nor valve closure always guarantees safety is established.",
+    "Visible flame extinction does not establish stopped leakage or atmosphere clearance.",
+    "Fuel isolation is a possible control pathway; the claim that only cooling or oxygen removal can control a gas fire is too broad.",
+    "Acetylene decomposition is a gas-specific exception; pure-fuel systems are not universally internally hazard-free.",
+    "UK/US guidance is cited within its stated scope, not automatically adopted as a local or ISS permission criterion.",
+    "No valve sequence, blanket deployment, DIY device instruction, actuator command or universal threshold is supplied.",
+    "NASA combustion records are related research; they do not qualify an industrial pipeline isolation system.",
+    "No fit, training, prediction or model validation is performed."
+  ],
+  "next_options": [
+    {
+      "id": "inspect_official_sources",
+      "label": "Inspect the official evidence",
+      "type": "source_navigation",
+      "query": "gas fire source isolation official guidance scope"
+    },
+    {
+      "id": "compare_mechanisms",
+      "label": "Compare jet fire, flashback and backdraft",
+      "type": "evidence_comparison",
+      "query": "external diffusion jet fire upstream flashback compartment backdraft differences"
+    },
+    {
+      "id": "inspect_missing_event_evidence",
+      "label": "Inspect missing isolation and post-shutdown evidence",
+      "type": "research_gap",
+      "query": "source isolation residual fuel post-shutdown measured event evidence"
+    }
+  ],
+  "science_gate": {
+    "status": "SOURCE_BOUND_DRAFT_READY_FOR_MAIN_QA",
+    "source_checks_complete": true,
+    "main_QA_required": true,
+    "operational_qualification": false,
+    "intervention_performance_validated": false,
+    "matched_validation_case_count": 0,
+    "model_validation": false,
+    "source_only": true,
+    "automatic_field_approval": false,
+    "field_procedure_provided": false,
+    "training_performed": false
+  },
+  "provenance": {
+    "kind": "Author-curated public source synthesis; no fitted model or operating-procedure engine.",
+    "science_contract_sha256": "3f1b193b903da2ed3dc78f5fc108741028f55930a5c6d2af38787f88dce95bd8",
+    "science_review_sha256": "fb5911b480796f7d6c870d684c1f73abcd7da3cab32cf9b2ebe1edebe1226ce4",
+    "normalization": "Preserves the eight nonexclusive authored conditions and their limits; source roles are guidance, related_experiment or unknown. Item source_ids refer to the condition-level source set; detailed locators are retained.",
+    "publication_boundary": "Official guidance and scientific interpretation only. Experimental records, measurements, raw bindings, weights and private file paths remain offline.",
+    "new_source_quote_words": 0,
+    "local_edition_pins": {
+      "verified_by": "Release coordinator, with physical page and edition checks; no new source download or PDF regeneration by this module.",
+      "sha256_by_source_id": {
+        "HSE_INDG297": "38bc112877f88487d84367045b82be3f8ba46042879e506e1b5bc164668d498b",
+        "NIST_TN2185": "6a023ab743d841407e7d619e4e92756a940731450a10063f5c5a591e5784b4a9"
+      }
+    },
+    "scope": "Source relevance and reported context never imply field competence, hazard clearance, intervention qualification or ISS/local-jurisdiction approval."
+  }
+}

@@ -1,0 +1,7 @@
+.git
+.wrangler
+node_modules
+research
+__pycache__
+.env
+.dev.vars*

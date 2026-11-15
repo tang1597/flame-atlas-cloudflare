@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <title>Flame Atlas · Search · v0.8.0</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand-shared.css">
+  <script src="evidence-chain-view.js" defer></script>
+  <script src="iss-fire-context.js" defer></script>
+  <script src="strategy-search-links.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#safety-query">Skip to search</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Flame Atlas home"><svg viewBox="0 0 30 34" aria-hidden="true"><path d="M4 28h22M15 26V4M11 9l4-5 4 5"/><circle cx="15" cy="18" r="3"/></svg><span>FLAME <b>ATLAS</b></span></a>
+    <nav aria-label="Research tools"><a class="habitat-map-link" href="atlas.html">Habitat map</a><a href="strategies.html">Fire safety strategies</a><a id="liquid-link" href="liquid.html">Liquid droplets</a><a href="gas-case.html">Gas case studies</a><a id="iss-link" href="#iss-fire-context">ISS standards</a><a id="physics-link" href="http://127.0.0.1:8793/physics.html" target="_blank" rel="noopener">Model checks ↗</a></nav>
+  </header>
+  <main id="main-content" class="search-layout">
+    <section id="question" class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">Search combustion research</h1>
+      <form id="query-form" class="query-form" role="search">
+        <label class="sr-only" for="safety-query">Your safety question</label>
+        <div class="search-bar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="safety-query" name="query" type="search" maxlength="2000" placeholder="Material, experiment or fire-safety question" autocomplete="off" required><button id="search-button" class="primary-button" type="submit">Search</button></div>
+        <div class="search-tools">
+          <details id="filter-details" class="filter-details"><summary>Filters<span id="filter-count"></span></summary><div class="filter-grid"><label for="pillar-filter">Safety focus</label><select id="pillar-filter"><option value="">All focuses</option><option value="prevention">Prevention</option><option value="detection">Detection</option><option value="suppression">Suppression</option></select><label for="material-filter">Material or formulation</label><input id="material-filter" type="text" maxlength="120" placeholder="e.g. PMMA"><label for="gravity-filter">Gravity context</label><input id="gravity-filter" type="text" maxlength="120" placeholder="e.g. microgravity"></div></details>
+          <button id="browse-button" class="text-button" type="button">Browse studies</button>
+          <button id="clear-filters" class="text-button" type="button" hidden>Clear filters</button>
+          <span id="active-filters" class="active-filters" hidden></span>
+        </div>
+      </form>
+      <div id="scenario-options" class="example-queries" role="group" aria-label="Example safety questions">
+        <span>Try</span>
+        <button type="button" data-query="Which material and environmental conditions matter most for preventing flame spread in a crew habitat?">Flame spread</button>
+        <button type="button" data-query="What do smoke-source measurements and detector hardware tell us about fire-detection limits in a crew habitat?">Smoke detection</button>
+        <button type="button" data-query="What source evidence links oxidizer dilution, flow and heat loss to extinction or suppression limits?">Extinction</button>
+      </div>
+    </section>
+    <section id="safety-assessment" class="safety-assessment assessment-unknown" aria-label="Safety assessment" aria-live="polite"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 21h20L12 3Z"/><path d="M12 9v5m0 3v.2"/></svg><div><p id="assessment-title">SAFETY NOT ASSESSED</p><p id="assessment-message">Browsing experiments does not assess your scenario.</p></div></section>
+    <section class="search-state" aria-label="Search status">
+      <div class="search-meta"><p id="search-status" role="status" aria-live="polite">Loading studies…</p><span id="semantic-mode" class="mode-badge">Source library</span></div>
+      <details id="search-details" class="search-diagnostics"><summary>Search details</summary><p id="semantic-note" class="small-note"></p><p id="active-query" class="small-note"></p><p id="semantic-model" class="small-note"></p><p id="results-note" class="small-note"></p><div id="source-warnings"></div><p id="standards-pointer" class="small-note"></p></details>
+    </section>
+    <section id="strategy-search-links" class="next-section" aria-label="Related fire-safety strategies" hidden></section>
+    <section id="source-results" aria-labelledby="results-heading"><div class="results-heading"><h2 id="results-heading">Reviewed studies</h2><span id="results-count"></span></div><div id="evidence-results"><p class="empty-state">Loading reviewed studies…</p></div></section>
+    <section id="next-questions" class="next-section" hidden><details id="next-details"><summary id="next-title">Refine your search</summary><div id="next-options"></div></details></section>
+    <details id="iss-fire-context" class="context-drawer"><summary id="iss-panel-title">ISS fire standards<span>Requirements and source documents</span></summary><div class="context-header"><button id="refresh-context" type="button" class="quiet-button" aria-label="Refresh ISS source context">Refresh sources</button></div><div id="iss-context"><p class="empty-state">Loading official sources…</p></div></details>
+    <footer><span>FLAME ATLAS · v0.8.0</span><span>3 reviewed exemplar chains</span></footer>
+  </main>
+  <noscript><p>Enable JavaScript to search the local evidence service.</p></noscript>
+</body>
+</html>

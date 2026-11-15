@@ -1,0 +1,24 @@
+{
+  "baseline_server": "backend/retained/server.py",
+  "baseline_arguments": {
+    "chains_path": "data/chains_path.json",
+    "standards_path": "data/standards_path.json",
+    "liquid_csv": "data/liquid_csv.csv",
+    "research_corpus": "data/research_corpus.json",
+    "operating_limits": "data/operating_limits.json",
+    "strategy_catalog": "data/strategy_catalog.json",
+    "atlas_mapping": "data/atlas_mapping.json",
+    "atlas_insights": "data/atlas_insights.json",
+    "atlas_qa": "data/atlas_qa.json",
+    "physics_url": null,
+    "strategy_preview": false,
+    "sources_path": "data/source_manifest.json"
+  },
+  "web_root": "frontend",
+  "semantic_url": "http://127.0.0.1:1/api/search",
+  "bridge_catalog": "data/bridge_catalog.json",
+  "atlas_snapshot": "data/atlas_snapshot.json",
+  "chart_presentation": "data/chart_presentation.json",
+  "narratives": "data/narratives.json",
+  "dataset_markdown_index": "data/dataset_markdown.json"
+}

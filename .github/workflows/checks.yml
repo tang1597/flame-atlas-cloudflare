@@ -1,0 +1,20 @@
+name: Delivery checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: pip install -r requirements.txt
+      - run: python prepare_data.py
+      - run: python run.py --check --ai-mode off
+      - run: python -m compileall -q backend cloudflare run.py prepare_data.py
+      - run: node cloudflare/test_worker.mjs

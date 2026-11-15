@@ -1,0 +1,4 @@
+# Core uses Python 3.12 standard library.
+# These reproduce the current optional liquid interpolation environment.
+numpy==1.26.4
+scipy==1.13.1

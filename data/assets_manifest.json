@@ -1,5 +1,5 @@
 {
-  "runtime_zip_sha256": "0efb65ed27158dbacf282c9118d2eecdbf560e568e3bf6047f4ba731da5930d0",
+  "runtime_zip_sha256": "b09f866cc874ae461e8ab8fb5388f9b6e39c3cc4a1b5731746419149031d5a8e",
   "documents": 370,
   "charts": 29,
   "raw_source_tables": 21,
@@ -7,5 +7,8 @@
   "local_fulltext_source_ids": 21,
   "local_unique_pdfs": 20,
   "full_papers_in_github": false,
-  "not_complete_raw_instrument_archive": true
+  "not_complete_raw_instrument_archive": true,
+  "dataset_markdown_notes": 525,
+  "default_summary_provider": "openai_responses",
+  "summary_includes_dataset_markdown": true
 }

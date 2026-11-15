@@ -1,0 +1,21 @@
+@font-face{font-family:"Fira Sans";src:url("assets/fonts/FiraSans-Black.ttf") format("truetype");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"Overpass";src:url("assets/fonts/Overpass-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Overpass";src:url("assets/fonts/Overpass-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+:root{--sa-deep-blue:#07173F;--sa-electric-blue:#0042A6;--sa-neon-blue:#0960E1;--sa-blue-yonder:#2E96F5;--sa-martian-red:#8E1100;--sa-rocket-red:#E43700;--sa-neon-yellow:#EAFE07;--sa-white:#FFF;--bg:#FFF;--paper:#FFF;--ink:#07173F;--muted:#495B81;--line:#D5DDF0}
+body{font-family:"Overpass",Arial,sans-serif}
+h1,h2,h3,h4,h5,.brand{font-family:"Fira Sans","Overpass",Arial,sans-serif;font-weight:900}
+button,input,select,textarea{font-family:inherit}
+a,details>summary{color:var(--sa-electric-blue)}
+.site-header{background:var(--sa-deep-blue);border-color:var(--sa-deep-blue);color:var(--sa-white)}
+.site-header a,.site-header .brand,.site-header .brand small{color:var(--sa-white)}
+.site-header nav a[aria-current="page"]{color:var(--sa-neon-yellow);text-decoration:underline;text-underline-offset:6px}
+.site-header nav a.habitat-map-link{color:var(--sa-neon-yellow);font-weight:700;border:1px solid currentColor;border-radius:4px;padding:7px 10px;line-height:1.3}
+.site-header nav{align-items:center}
+.primary-button,.gas-search-row button[type="submit"],.search-row button[type="submit"]{background:var(--sa-electric-blue);border-color:var(--sa-electric-blue);color:var(--sa-white)}
+.primary-button:hover,.gas-search-row button[type="submit"]:hover,.search-row button[type="submit"]:hover{background:var(--sa-deep-blue);border-color:var(--sa-deep-blue)}
+.quiet-button{color:var(--sa-electric-blue);border-color:var(--sa-electric-blue);background:var(--sa-white)}
+:focus-visible{outline:3px solid var(--sa-neon-blue);outline-offset:3px}
+.site-header :focus-visible{outline-color:var(--sa-neon-yellow)}
+.space-apps-attribution{display:inline-flex;align-items:center;justify-content:center;padding:18px;background:var(--sa-deep-blue)}
+.space-apps-attribution img{display:block;width:142px;max-width:100%;height:auto}
+/* Existing green Pass and other diagnostic colors retain their original meaning. */

@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "flame-atlas",
+  "main": "cloudflare/worker.mjs",
+  "compatibility_date": "2026-11-15",
+  "containers": [{
+    "class_name": "FlameContainer",
+    "scheduling_policy": "durable_object",
+    "images": {"base": {"dockerfile": "./Dockerfile"}}
+  }],
+  "durable_objects": {"bindings": [{"name": "FLAME_CONTAINER", "class_name": "FlameContainer"}]},
+  "exports": {"FlameContainer": {"type": "durable-object", "storage": "sqlite"}}
+}

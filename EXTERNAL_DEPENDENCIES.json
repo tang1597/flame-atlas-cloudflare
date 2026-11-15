@@ -1,0 +1,35 @@
+{
+  "default_ai": {
+    "provider": "openai_responses",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max",
+    "service_tier": "fast",
+    "requires": "A server-side OPENAI_API_KEY; none is packaged. Live access has not been verified."
+  },
+  "optional_local_ai": {
+    "mode": "--ai-mode local",
+    "endpoint": "http://127.0.0.1:8782/v1",
+    "model": "nasa-qwen3-4b-q4",
+    "weights_included": false,
+    "starts_service": false
+  },
+  "frozen_semantic_search": {
+    "included": false,
+    "default": "disabled; main workspace uses its packaged lexical question-plan retrieval",
+    "optional": "--semantic-url http://127.0.0.1:8784/api/search"
+  },
+  "legacy_physics_service": {
+    "included": false,
+    "old_endpoint": "http://127.0.0.1:8793/physics.html",
+    "status_at_inventory": "Not listening; old navigation links are retained in the archived auxiliary pages."
+  },
+  "python": "3.12",
+  "optional_liquid_interpolation": [
+    "numpy==1.26.4",
+    "scipy==1.13.1"
+  ],
+  "not_a_public_cloud_release": [
+    "Loopback listener/Host restrictions retained",
+    "No API rate-limit/authentication service is supplied"
+  ]
+}

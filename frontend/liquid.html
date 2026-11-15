@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <title>Flame Atlas · Research &amp; models</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="liquid.css">
+  <link rel="stylesheet" href="brand-shared.css">
+  <script src="strategy-search-links.js" defer></script>
+  <script src="liquid.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#liquid-fuel">Skip to droplet controls</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Flame Atlas home"><svg viewBox="0 0 30 34" aria-hidden="true"><path d="M4 28h22M15 26V4M11 9l4-5 4 5"/><circle cx="15" cy="18" r="3"/></svg><span>FLAME <b>ATLAS</b></span></a>
+    <nav aria-label="Research tools"><a class="habitat-map-link" href="atlas.html">Habitat map</a><a href="strategies.html">Fire safety strategies</a><a href="./index.html">Safety evidence</a><a href="liquid.html" aria-current="page">Research &amp; models</a><a href="gas-case.html">Gas case studies</a></nav>
+  </header>
+  <main class="liquid-layout">
+    <div class="liquid-heading"><h1>Liquid combustion research &amp; models</h1><p>Find liquid-fuel research and explore supported droplet conditions.</p></div>
+    <form id="liquid-search-form" class="liquid-search-form" role="search"><label for="liquid-query">Search research or describe a scenario</label><div><input id="liquid-query" type="search" placeholder="e.g. methanol droplet extinction in low oxygen" autocomplete="off" disabled><button id="liquid-search" class="primary-button" type="submit" disabled>Search</button></div><p id="liquid-search-status" role="status" aria-live="polite">Loading available research…</p></form>
+    <div id="scenario-followups" class="scenario-followups" aria-label="Refine scenario search" hidden></div>
+    <section id="paper-results" class="liquid-research paper-results" aria-label="Related papers" hidden></section>
+    <section id="strategy-search-links" class="next-section" aria-label="Related fire-safety strategies" hidden></section>
+    <section id="model-data-support" hidden class="model-data-support model-support-pending" aria-label="Model data support" aria-live="polite"><strong id="model-support-title">MODEL DATA SUPPORT: PENDING</strong><p>Model-output support only — not a safety pass.</p></section>
+    <section id="liquid-safety" class="safety-assessment assessment-unknown" aria-label="Operating safety assessment" aria-live="polite"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 21h20L12 3Z"/><path d="M12 9v5m0 3v.2"/></svg><div><p id="liquid-safety-title">SAFETY CHECK: UNKNOWN</p><p id="liquid-safety-message" hidden>Peak chamber pressure, thermal load and containment failure are not predicted.</p></div></section>
+    <details id="operating-criteria" class="liquid-details operating-criteria" hidden><summary>Safety criteria &amp; sources</summary><div id="operating-criteria-content"></div></details>
+    <div id="liquid-workspace" class="liquid-workspace">
+      <form id="liquid-controls" class="liquid-controls" aria-label="Droplet comparison controls">
+        <label for="liquid-fuel">Fuel</label><select id="liquid-fuel" disabled><option value="">Loading fuels…</option></select>
+        <label for="liquid-scenario">Scenario</label><select id="liquid-scenario" disabled><option value="source_experiment" selected>Documented chamber experiment</option><option value="unignited_baseline">Unignited scenario (assumed)</option></select>
+        <select id="liquid-reference" aria-label="Internal source matching reference" hidden tabindex="-1" disabled><option value="">Loading experiments…</option></select>
+        <div class="liquid-control"><div><label for="diameter-range">Initial diameter</label><div><input id="diameter-value" aria-label="Initial diameter in millimeters" type="number" min="0" step="any" disabled><span>mm</span></div></div><input id="diameter-range" type="range" aria-label="Initial diameter" disabled></div>
+        <div class="liquid-control"><div><label for="pressure-range">Ambient pressure</label><div><input id="pressure-value" aria-label="Ambient pressure in kilopascals" type="number" min="0" step="any" disabled><span>kPa</span></div></div><input id="pressure-range" type="range" aria-label="Ambient pressure" disabled></div>
+        <div class="liquid-control"><div><label for="oxygen-range">Ambient oxygen</label><div><input id="oxygen-value" aria-label="Ambient oxygen mole percent" type="number" min="0" max="100" step="any" disabled><span>mol%</span></div></div><input id="oxygen-range" type="range" aria-label="Ambient oxygen" disabled></div>
+        <button id="liquid-compare" class="primary-button" type="submit" disabled>Compare</button>
+        <button id="liquid-reset" class="text-button" type="button" disabled>Load supported example</button>
+        <p id="mixture-context" class="liquid-context">Additional mixture conditions will be shown with the selected experiment.</p>
+      </form>
+      <section class="liquid-output" aria-label="Experiment and model comparison">
+        <div id="liquid-support" class="liquid-support support-unknown" role="status" aria-live="polite"><strong id="support-title">LOADING EVIDENCE</strong><p id="support-message">Waiting for the reviewed liquid-data service.</p></div>
+        <details id="scenario-data-details" class="liquid-details" hidden><summary>Related experimental data</summary><section id="scenario-datasets" class="liquid-research" aria-label="Related experimental data"></section></details>
+        <div class="comparison-heading"><h2 id="liquid-result-heading">Model prediction</h2><span id="prediction-mode"></span></div>
+        <div id="comparison-context" class="comparison-context"></div>
+        <div id="liquid-metrics"><p class="empty-state">Measurements and predictions appear after loading.</p></div>
+        <div id="liquid-chart" class="liquid-chart" hidden></div>
+        <details id="liquid-validation" class="liquid-details liquid-validation"><summary>Model validation against experiments</summary><section id="liquid-research" class="liquid-research" aria-label="Source investigations" hidden></section><div id="liquid-validation-content"></div></details>
+        <details id="liquid-details" class="liquid-details"><summary>Conditions, sources and model limits</summary><div id="liquid-source-details"></div></details>
+        <a id="liquid-literature-link" class="liquid-literature-link" href="./index.html" hidden>Open safety evidence search ↗</a>
+      </section>
+    </div>
+    <footer><span>FLAME ATLAS</span><span>Existing models · no retraining</span></footer>
+  </main>
+</body>
+</html>

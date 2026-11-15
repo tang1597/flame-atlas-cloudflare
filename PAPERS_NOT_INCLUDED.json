@@ -1,0 +1,111 @@
+{
+  "count": 21,
+  "papers": [
+    {
+      "source_id": "BASSII-TM-20210011385",
+      "sha256": "5ffa911fd9b6356f204646003fb9342e341810dcdfdf5cb15756e7f01ec5f770",
+      "filename": "BASS-II Summary Report_e7fcef281a.pdf"
+    },
+    {
+      "source_id": "NASA-TP-2015-216046",
+      "sha256": "b4f6ca983e2792c33a0b92220a791a818f426bb635b94f7fd33dc8c9c471e79d",
+      "filename": "Detailed Results from the Flame Extinguishment Experiment (FLEX) March 2009 to December 2011_1f219c641b.pdf"
+    },
+    {
+      "source_id": "SAME2010",
+      "sha256": "af91c96d22d93bbefbc0f2c5e1cc06e24813f532e5379b3fec9f121cccb22193",
+      "filename": "PSI-102_Reports_SAME_Final Science Report.pdf"
+    },
+    {
+      "source_id": "SAMER2014",
+      "sha256": "65381e2715eb7379113dd1b9c550baaa5fa5a247dba00419123143aa98ef80d6",
+      "filename": "PSI-101_Reports_SAME-R_Final Report.pdf"
+    },
+    {
+      "source_id": "Garrick2020",
+      "sha256": "487108f951ba8ec9042464ae7c70a8190fa63c4b1141f8b1dfe19d697bd9752c",
+      "filename": "PSI-115_Reports_NNX17AF08A_FinalReport.pdf"
+    },
+    {
+      "source_id": "FSJ2018",
+      "sha256": "87e219e20754d5e60b819547327f0f8875d6c0823dd75dd1190e868a5554051c",
+      "filename": "Evaluation of Spacecraft Smoke Detector Performance in the.pdf"
+    },
+    {
+      "source_id": "CFI-OPS-PROTOCOL",
+      "sha256": "4e6dc66cb2a4bac018296ddc956281f71637242d72a764fc8d5e349bf1418a7b",
+      "filename": "PSI-39_Engineering Documents_CFI Operational Requirements and Protocols.pdf"
+    },
+    {
+      "source_id": "HSE_INDG297",
+      "sha256": "38bc112877f88487d84367045b82be3f8ba46042879e506e1b5bc164668d498b",
+      "filename": "HSE-INDG297-2012.pdf"
+    },
+    {
+      "source_id": "NIST_TN2185",
+      "sha256": "6a023ab743d841407e7d619e4e92756a940731450a10063f5c5a591e5784b4a9",
+      "filename": "NIST-TN2185-2022.pdf"
+    },
+    {
+      "source_id": "SCENE-2a99e5db08d9eceb",
+      "sha256": "2a99e5db08d9ecebdb6bb618e5f56da190fbe482a9a2bdd742d28f3cd88cf924",
+      "filename": "Initial diameter effects on combustion of unsupported equi-volume n-heptane_iso-octane mixture dropl__2a99e5db08.pdf"
+    },
+    {
+      "source_id": "SCENE-302c8a9bcb5a847d",
+      "sha256": "302c8a9bcb5a847db044a6bd87f0319431132f5bbd506ae47837b41930b66aab",
+      "filename": "PSI-39_Presentations_Aspects of Cool-Flame Supported Droplet Combustion in Microgravity_CFI.pdf"
+    },
+    {
+      "source_id": "SCENE-8e4625bb2b2a8b17",
+      "sha256": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+      "filename": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf"
+    },
+    {
+      "source_id": "SCENE-2fe2fc85aa8ee3ac",
+      "sha256": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+      "filename": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf"
+    },
+    {
+      "source_id": "SCENE-2ada277f4accf3ff",
+      "sha256": "2ada277f4accf3ff7dca0c4701609480a32c76141fe008d8253c341848b28cf0",
+      "filename": "PSI-20_Reports_Dissertation-PD-revised_.pdf"
+    },
+    {
+      "source_id": "SCENE-4fc7ff5b54327bcb",
+      "sha256": "4fc7ff5b54327bcb10fda2f909223a6170943fa12b04d16f03673d62f51f1a5e",
+      "filename": "A computational and experimental study of coflow laminar methane_air diffusion flames_ Effects of fu__4fc7ff5b54.pdf"
+    },
+    {
+      "source_id": "SCENE-5ffa911fd9b6356f",
+      "sha256": "5ffa911fd9b6356f204646003fb9342e341810dcdfdf5cb15756e7f01ec5f770",
+      "filename": "BASS-II Summary Report_e7fcef281a.pdf"
+    },
+    {
+      "source_id": "SCENE-d87675b105c4e44e",
+      "sha256": "d87675b105c4e44e49b7d375b48bb97dbf3d2b681911f122934a913aa296303d",
+      "filename": "PSI-26_Presentations_Flammability Aspects of Fabric_USNationalCombustion2013.pdf"
+    },
+    {
+      "source_id": "SCENE-ffe6664bb8a88bf3",
+      "sha256": "ffe6664bb8a88bf3fe13e9f636a0834342ad8f5a40bcdfd476379985113a81ff",
+      "filename": "Flame spread Effects of microgravity and scale.pdf"
+    },
+    {
+      "source_id": "SCENE-f579df9652dc4504",
+      "sha256": "f579df9652dc450475b93fbdb3dd7a74c8ada5a28ca97b25dd703cacd9b52798",
+      "filename": "Laminar smoke points of coflowing flames in microgravity__f579df9652.pdf"
+    },
+    {
+      "source_id": "SCENE-ea30d9a92d21158c",
+      "sha256": "ea30d9a92d21158c5a8d2fe478cedad14f5b3e6e85112b0503a967e307365c68",
+      "filename": "Buoyancy effects on concurrent flame spread over thick PMMA__ea30d9a92d.pdf"
+    },
+    {
+      "source_id": "SCENE-0d816518ea6869dd",
+      "sha256": "0d816518ea6869dd61b1201716d05316a44eeb7ea9ec53cf9cc2670d15ae34f5",
+      "filename": "Concurrent Flame Spread Over Two-Sided Thick PMMA Slabs in Microgravity__0d816518ea.pdf"
+    }
+  ],
+  "note": "Original PDFs remain in the offline source collection; DOI/NTRS URLs remain in the catalog."
+}

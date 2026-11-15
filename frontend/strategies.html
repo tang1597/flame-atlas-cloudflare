@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f6ee">
+  <title>Flame Atlas · Fire safety strategies</title>
+  <link rel="stylesheet" href="strategies.css">
+  <link rel="stylesheet" href="brand-shared.css">
+  <script src="strategies.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#strategy-query">Skip to strategy search</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">FLAME <b>ATLAS</b></a>
+    <nav aria-label="Research tools"><a class="habitat-map-link" href="atlas.html">Habitat map</a><a href="index.html">Safety evidence</a><a href="liquid.html">Liquid droplets</a><a href="gas-case.html">Gas case studies</a><a href="strategies.html" aria-current="page">Strategies</a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">NASA EVIDENCE → FIRE SAFETY RESEARCH</p>
+      <h1 id="page-title">Fire safety strategies</h1>
+      <p>Follow NASA observations to a fire-safety question, an Earth comparison and a strategy to test.</p>
+      <form id="strategy-search-form" role="search"><label for="strategy-query">Find a strategy or describe a question</label><div class="search-row"><input id="strategy-query" type="search" maxlength="1500" placeholder="e.g. ventilation, smoke detection, or droplet extinction" disabled><button id="strategy-search-button" type="submit" disabled>Search</button></div></form>
+    </section>
+    <section id="strategy-review-status" class="review-banner" aria-label="Catalog review status" hidden><strong>Draft for review</strong><p>Local review preview. This view is not a final published release.</p></section>
+    <section class="scope-banner" aria-label="Safety scope"><strong>SAFETY: UNKNOWN</strong></section>
+    <p id="strategy-status" class="status" role="status" aria-live="polite">Awaiting the reviewed strategy catalog.</p>
+    <p id="strategy-scope-message" class="scope-message" role="status" hidden></p>
+    <p id="strategy-error" class="error" role="alert" hidden></p><button id="strategy-retry" type="button" class="quiet-button" hidden>Retry loading</button>
+    <div class="strategy-workspace">
+      <aside class="priority-panel" aria-labelledby="priority-title"><h2 id="priority-title">Research priorities</h2><p id="ranking-method" class="small-note">Prioritized by source completeness and fire-safety relevance.</p><div id="priority-list"></div></aside>
+      <section id="selected-case" class="case-panel" aria-label="Selected strategy case"><p class="empty">No reviewed case has been loaded.</p></section>
+    </div>
+    <details id="strategy-source-library" class="disclosure source-library" hidden><summary>Source library <span id="strategy-source-count"></span></summary><p class="small-note">Page links use an exact-edition local PDF when one is supplied; official source links retain their external address.</p><div id="strategy-sources"></div></details>
+    <footer><span>FLAME ATLAS · STRATEGY RESEARCH</span><span>Source observations, interpretation and proposals stay distinct.</span></footer>
+  </main>
+  <noscript><p>Enable JavaScript to load reviewed strategies.</p></noscript>
+</body>
+</html>

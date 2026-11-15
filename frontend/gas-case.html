@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <title>Flame Atlas · Gas leaks, isolation and flashback</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gas-case.css">
+  <link rel="stylesheet" href="brand-shared.css">
+  <script src="gas-case.js" defer></script>
+</head>
+<body class="gas-page">
+  <a class="skip" href="#gas-query">Skip to case search</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Flame Atlas search"><svg viewBox="0 0 30 34" aria-hidden="true"><path d="M4 28h22M15 26V4M11 9l4-5 4 5"/><circle cx="15" cy="18" r="3"/></svg><span>FLAME <b>ATLAS</b></span></a>
+    <nav aria-label="Research tools"><a class="habitat-map-link" href="atlas.html">Habitat map</a><a href="strategies.html">Fire safety strategies</a><a href="./index.html">Safety evidence</a><a href="liquid.html">Liquid droplets</a><a href="gas-case.html" aria-current="page">Gas case studies</a></nav>
+  </header>
+  <main class="gas-layout">
+    <section class="gas-heading" aria-labelledby="gas-title">
+      <p class="eyebrow">FIRE SAFETY CASE STUDIES</p>
+      <h1 id="gas-title">Gas leaks, isolation and flashback</h1>
+      <p id="gas-summary" class="gas-intro">Explore documented conditions, intervention principles and the evidence still needed.</p>
+    </section>
+    <section class="gas-boundary" aria-label="Assessment scope">
+      <strong>SCENARIO SAFETY: UNKNOWN</strong>
+      <p>Research evidence does not establish that your situation is safe. This page gives no live valve-operating sequence.</p>
+    </section>
+    <form id="gas-search-form" class="gas-search-form" role="search">
+      <label for="gas-query">Search a case or describe a scenario</label>
+      <div class="gas-search-row"><input id="gas-query" type="search" maxlength="1500" placeholder="e.g. continuous gas leak, oxygen in a line, or fuel isolation" autocomplete="off" disabled><button id="gas-search-button" class="primary-button" type="submit" disabled>Search cases</button></div>
+      <div class="gas-filters">
+        <label for="gas-scenario">Research branch<select id="gas-scenario" disabled><option value="">All branches</option></select></label>
+        <label for="gas-sort">Order<select id="gas-sort" disabled><option value="text_match">Best text match</option><option value="source_order">Source order</option></select></label>
+        <button id="gas-clear" class="text-button" type="button" disabled>Clear search</button>
+      </div>
+      <p class="gas-method">Local matching of authored case text — no trained AI ranking or safety-confidence score. Branches can overlap.</p>
+    </form>
+    <details id="gas-input-notes" class="gas-context" hidden><summary>Useful scenario information</summary><div id="gas-input-content"></div></details>
+    <div id="gas-next-options" class="gas-next-options" aria-label="Suggested case searches" hidden></div>
+    <section aria-labelledby="gas-results-heading">
+      <div class="gas-results-heading"><h2 id="gas-results-heading">Case evidence</h2><p id="gas-status" role="status" aria-live="polite">Loading reviewed cases…</p></div>
+      <p id="gas-error" class="gas-error" role="alert" hidden></p>
+      <button id="gas-retry" type="button" class="quiet-button" hidden>Retry loading</button>
+      <div id="gas-results"></div>
+    </section>
+    <details id="gas-related" class="gas-context" hidden><summary>Related experimental context</summary><div id="gas-related-content"></div></details>
+    <details id="gas-source-library" class="gas-context gas-library"><summary>Source library <span id="gas-source-count"></span></summary><p class="small-note">Source buttons in a case open and highlight its card here. Each card links to the official document; PDF page links keep their stated source edition.</p><div id="gas-sources" class="gas-sources"></div></details>
+    <details id="gas-limits" class="gas-context" hidden><summary>Evidence limits</summary><div id="gas-limits-content"></div></details>
+    <footer><span>FLAME ATLAS · CASE STUDIES</span><span>Guidance and related experiments · no new model run</span></footer>
+  </main>
+  <noscript><p>Enable JavaScript to load the local case-evidence service.</p></noscript>
+</body>
+</html>

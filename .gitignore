@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.dev.vars*
+.wrangler/
+node_modules/
+data/*
+!data/runtime.zip
+!data/assets_manifest.json
+research/*.pdf
+*.gguf
+*.safetensors

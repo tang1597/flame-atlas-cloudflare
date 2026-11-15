@@ -1,0 +1,283 @@
+# PSI-101-ground-drum-408 煙霧資料與研究判讀
+
+本卡的單位是來源身份分組的一個試次。新鮮／老化分率、重複排序視圖及感測器時間樣本不自動算成新的火災。
+
+## 身份與資料範圍
+
+| 研究 | 來源身份 | 材料標籤 | 日期原值 | 摘要觀測列數 | 可連結檔案數 |
+| --- | --- | --- | --- | --- | --- |
+| PSI-101 | canonical_summary_group_not_independent_execution_count | \[{"raw": "Silicone", "canonical_family": "Silicone", "source_locator": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "B41"}}\] | \[{"date_value": 41152, "date_cell": "I41", "gmt_value": null, "gmt_cell": "H41", "source_sheet": "Drum 8-2012", "date_encoding": "Excel serial when numeric; date-year comes from source style/context, not imputed from GMT"}, {"date_value": 41152, "date_cell": "I42", "gmt_value": null, "gmt_cell": "H42", "source_sheet": "Drum 8-2012", "date_encoding": "Excel serial when numeric; date-year comes from source style/context, not imputed from GMT"}\] | 2 | 1 |
+
+目前身份分組未記錄衝突；這不代表所有外部出版品都已逐列對上。
+
+其中 0 個檔案連結只屬檔名候選。未核對檔案內部身份／日期者，不當成已確認的本試次原始量測；下方來源表保留 method 與 status。
+
+## 文獻研究結果與本試次的關係
+
+精確對上本試次摘要身份的已核對文獻數：0。這是出版表格與目前摘要資料的對照，不代表原始感測器／TEM影像也已對上。下表其餘項目是同研究的背景或方法脈絡，不能據此宣稱作者使用了本試次所有列。
+
+| 文獻／展示資料 | 類型／審閱狀態 | 使用範圍與精確試次連結 |
+| --- | --- | --- |
+| [60089MFHA415 Ignitor Wire Coil Assembly (for 0 .250 OD samples)](<../literature/smoke-3a00d49f4c76.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA417-B Kapton Sample Assembly](<../literature/smoke-c2623fa3831d.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHD413 Teflon Sample Part](<../literature/smoke-aabcd516772d.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA416-A Silicone Sample Assembly](<../literature/smoke-b7361a83d3ac.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA414-A Lampwick Sample Assembly](<../literature/smoke-996b31e7126a.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [S1171MFHA401 Pyrell Sample Assembly](<../literature/smoke-bdf16837754f.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA410-A Teflon Sample Assembly](<../literature/smoke-db190ce58655.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA419 Silicone Ignitor Wire Coil Assembly](<../literature/smoke-3245d0e4917e.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHD509 P-Trak Condenser Tube Modification](<../literature/smoke-ff80b858803f.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA432-A Kapton Ignitor Wire Coil Assembly](<../literature/smoke-5a079a55014d.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA411 Teflon Ignitor Wire Coil Assembly](<../literature/smoke-edfa693a5e48.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Drawing_SAME Aging Chamber](<../literature/smoke-3968aeb41d3a.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHD126-B Smoke Generation Tube](<../literature/smoke-63aefebcfec2.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [SAME-DOC-001 Rev. A: Baseline Concept Description Document](<../literature/smoke-3eed4b7ecd71.md>) | Engineering concept and planned experiment/design document; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHP000-C SAME Fluids System Schematic](<../literature/smoke-bf9cb1366821.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [PSI-102_Reference Data_SAME_Software Description Document](<../literature/smoke-e6b4b119f7ad.md>) | engineering_requirements_or_software_operations; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [80089MFHP000-E SAME Fluids System Schematic](<../literature/smoke-4db42228ca36.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [60089MFHA150-B Aging Chamber Assembly](<../literature/smoke-fe2d380bd432.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [PSI-101_Reference Data_SAME_Software Requirement Document_004 Rev D](<../literature/smoke-ea41d0a9db34.md>) | engineering_requirements_or_software_operations; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Smoke Aerosol Measurement Experiment (SAME): Operations Manual](<../literature/smoke-ac00e24b0f9a.md>) | Hardware/software operations and troubleshooting manual; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Fluids Control Unit, Schematic, left side-1](<../literature/smoke-71fc3a90db8c.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [80089MFHP000-E SAME Fluids System Schematic, right side-1](<../literature/smoke-f0bcddc0e733.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [SAME_Wire_Report](<../literature/smoke-78784625aaff.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Smoke Aerosol Measurement Experiment Re-flight (SAMER)](<../literature/smoke-65381e2715eb.md>) | Final experimental research report with engineering calculations, appendices and a reproduced2012conference manuscript; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [SAME_EIRD](<../literature/smoke-941dca3ccf71.md>) | engineering_or_operations_document; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Smoke Aerosol Measurement Experiment-2: Comparison of Flight Experiment Results with Ground Test Results](<../literature/smoke-0e8480e701f4.md>) | Research conference slide deck, with measured ground/flight comparison and separate simulation illustrations; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Measurement of Smoke Particle Size under Low-Gravity Conditions](<../literature/smoke-95325b626e6a.md>) | Legacy PowerPoint research deck presenting preliminary SAME-1results and engineering context; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Detection of Smoke from Microgravity Fires](<../literature/smoke-ace2a1841b1a.md>) | research conference presentation with experimental charts/tables and model explanation; not rawimagealbum; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102", "PSI-47"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2](<../literature/smoke-6e2800c0985e.md>) | Research conference slide deck with flight measurements, historical theoretical aging comparisons and future work; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2](<../literature/smoke-bdc5e7e0d65f.md>) | conference_paper; fulltext_available_targeted_methods_results_conclusions_reviewed | {"study_ids": \["PSI-102", "PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [“SMOKE:” Characterization of Smoke Particulate for Spacecraft Fire Detection](<../literature/smoke-36c89dea3ec8.md>) | primary laboratory experimental article; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Evaluation of Low-Gravity Smoke Particulate for Spacecraft Fire Detection](<../literature/smoke-0685a722f6da.md>) | research_presentation; fulltext_available_targeted_methods_results_conclusions_reviewed | {"study_ids": \["PSI-102", "PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Sample descriptions tables](<../literature/smoke-715cd2c45607.md>) | data_companion_material_table_or_note; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [ISS Coagulation](<../literature/smoke-9fb2a74c848d.md>) | data_companion_material_table_or_note; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [SAME: Verification Plan and Engineering Requirements Document (VPERD)](<../literature/smoke-72a7264cc600.md>) | engineering_requirements_or_software_operations; identity_and_container_only_no_scientific_conclusions_inferred | {"study_ids": \["PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Evaluation of Low-Gravity Smoke Particulate for Spacecraft Fire Detection](<../literature/smoke-6250b4549563.md>) | conference_paper; fulltext_available_targeted_methods_results_conclusions_reviewed | {"study_ids": \["PSI-102", "PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Evaluation of Spacecraft Smoke Detector Performance in the Low-Gravity Environment](<../literature/smoke-87e219e20754.md>) | journal_author_manuscript; fulltext_available_targeted_methods_results_conclusions_reviewed | {"study_ids": \["PSI-102", "PSI-101"\], "binding_level": "selected_canonical_summary_rows_verified_raw_sensor_and_TEM_files_unknown", "exact_trial_ids": \["PSI-101-run-54", "PSI-101-run-55", "PSI-101-run-62", "PSI-101-run-63", "PSI-101-run-64", "PSI-101-run-94"\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join.", "reported_test_labels": \["Table1:54,55,94,62,63,64;exact rawsensor-file joins not established"\], "selected_record_ids": \["PSI-101-run-54-row-11", "PSI-101-run-55-row-13", "PSI-101-run-94-row-84", "PSI-101-run-62-row-25", "PSI-101-run-62-row-26", "PSI-101-run-63-row-27", "PSI-101-run-63-row-28", "PSI-101-run-64-row-29", "PSI-101-run-64-row-30"\], "raw_sensor_join": "unknown", "raw_TEM_image_join": "unknown"} |
+| [Smoke Characterization and Feasibility of the Moment Method for Spacecraft Fire Detection](<../literature/smoke-38e8cf0ab5b7.md>) | journal_article; fulltext_available_targeted_methods_results_conclusions_reviewed | {"study_ids": \["PSI-102", "PSI-101"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+| [Response of Smoke Detectors to Monodisperse Aerosols](<../literature/smoke-b41d8cfef139.md>) | primary laboratory experimental article; prior_primary_audit_reused_source_bytes_reverified | {"study_ids": \["PSI-101", "PSI-102", "PSI-47"\], "binding_level": "campaign_context_not_trial_join", "exact_trial_ids": \[\], "exact_trial_binding_status": "unknown", "known_context": "Source conditions and named experiment family where reviewed; no blanket row-to-document join."} |
+
+
+### 本試次的已核對出版表格資料
+
+來源尚未提供可核對的項目；不填成 0。
+
+
+[開啟矩公式與TEM實驗方法對照](<../viewer/viewer.html?trial=PSI-101-ground-drum-408&view=methods>)。TEM是獨立的量測技術，但這裡使用相同飛行樣本；校正／密度／選模的保留樣本獨立性未證實，不能稱為獨立預測驗證。完整血緣及印列差異見 [PUBLICATION_DATA_BINDINGS.md](../PUBLICATION_DATA_BINDINGS.md)。
+
+## 使用的資料部分與參數因子
+
+下列快取值依原欄位保留。來源計算量、量測輸入、設定與狀態旗標分列；來源公式未被修正或重新擬合。
+
+| 來源記錄 | 欄位／因子 | 原始值或快取 | 單位 | 儲存格／來源定位 | 量的角色 |
+| --- | --- | --- | --- | --- | --- |
+| PSI-101-ground-drum-408-row-41 | Test sequence  | 20 | Unknown（來源未提供／尚未核對） | A41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Sample Type | Silicone | Unknown（來源未提供／尚未核對） | B41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | SAME # | 408 | Unknown（來源未提供／尚未核對） | F41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Description | No Drum | Unknown（來源未提供／尚未核對） | G41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Date (EST) | 41152 | Unknown（來源未提供／尚未核對） | I41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Inlet Velocity (cm/sec) | 8.1 | cm/s | K41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Rt/R0 | 1.35 | dimensionless | L41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Duration (sec) | 36 | s | M41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Primary Aging Duration (sec) | 11 | s | N41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Primary Mixing Duration (sec) | 8 | s | O41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | PreAge Thermal Precipitator | n | Unknown（來源未提供／尚未核對） | P41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | PreAge Thermal Precipitator Duration | n/a | Unknown（來源未提供／尚未核對） | Q41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Primary Aging Therm Precip | n | Unknown（來源未提供／尚未核對） | S41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Primary Aging Therm Precip Duration | n/a | Unknown（來源未提供／尚未核對） | T41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Use STS Detector | n | Unknown（來源未提供／尚未核對） | U41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Use Drums (CDE A) | y | Unknown（來源未提供／尚未核對） | V41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Use Comm Diag B | y | Unknown（來源未提供／尚未核對） | W41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Diluting Drums (CDE A) | n | Unknown（來源未提供／尚未核對） | X41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Diluting B | y | Unknown（來源未提供／尚未核對） | Y41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Impactor Inlet on CDB | 10 | Unknown（來源未提供／尚未核對） | AA41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Use P-Trak | y | Unknown（來源未提供／尚未核對） | AB41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Aerosol Concentration To P-Trak | 0.031808713 | Unknown（來源未提供／尚未核對） | AC41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Secondary Diagnostics Volume %  | 58 | % | AE41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Secondary Aging Duration (sec) | 720 | s | AF41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Secondary Mixing Duration (sec) | 5 | s | AG41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | STSDetector | n | Unknown（來源未提供／尚未核對） | AH41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Drums (Comm Diag A) | y | Unknown（來源未提供／尚未核對） | AI41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Comm Diag B | y | Unknown（來源未提供／尚未核對） | AJ41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Diluting Drums (CDE A) | n | Unknown（來源未提供／尚未核對） | AK41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Diluting B | y | Unknown（來源未提供／尚未核對） | AL41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ues PTrak | y | Unknown（來源未提供／尚未核對） | AM41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Aerosol Concentration To P-Trak | 0.031808713 | Unknown（來源未提供／尚未核對） | AN41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | secondary agign thermal precip duration | n | Unknown（來源未提供／尚未核對） | AP41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | ISS Obscuration (volts) | n/a | V | AQ41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | ISS Detector Scatter (volts) | n/a | V | AR41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | STS Detector (volts) | n/a | V | AS41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | STS Detector offset (volts) | n/a | V | AT41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ion A (volts) Drum | n/a | V | AU41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ion A offset V0 (volts)-Drum | n/a | V | AV41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ion B (volts) | 8.057236500000002 | V | AW41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ion B offset V0 (volts) | 4.708303333333333 | V | AX41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ptrak (PT/cc) | 111400 | #/cm^3 | AY41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | DustTrak A (mg/m3) Drum | n/a | mg/m^3 | AZ41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | DustTrak A (mg/m3) Drumoffset | n/a | mg/m^3 | BA41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | DustTrak B (mg/m3) | 242.93770000000004 | mg/m^3 | BB41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Ion B Delta (volts) | 3.3489331666666686 | V | BC41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | M0 best Diameter (#/cm3) | 5953626.605389535 | #/cm^3 | BD41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | M1 (mm/cm3) | 1333.7974458350552 | mm/cm^3 | BE41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | (Drum)  offset and dilution corrected | n/a | Unknown（來源未提供／尚未核對） | BF41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | DustTrak A (mg/m3) (Drum)  offset, dilution and Gain corrected | n/a | mg/m^3 | BG41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | DustTrak B calibratred and corrected for dilution (mg/m3) | 231.53137928043083 | mg/m^3 | BH41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | M1/M0 (micro-m)--AMD | 0.22403108798049776 | um | BI41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Diameter of Average mass (micro-m) | 0.43537388769665997 | um | BJ41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | George's d2,1,  (micro-m) | 0.6069311432845796 | um | BK41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | MPASS 3/2 | n/a | Unknown（來源未提供／尚未核對） | BL41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Hatch Choate Sigma g | 2.259446417724562 | dimensionless | BM41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Hatch Choate Dg | 0.16070568600439766 | Unknown（來源未提供／尚未核對） | BN41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | CPC 100 nm cal, dilution corrected | 5953626.605389535 | Unknown（來源未提供／尚未核對） | BO41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | CPC 600 nm cal, dilution corrected | 5552887.348821689 | Unknown（來源未提供／尚未核對） | BP41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | CPC 1200 nm cal, dilution corrected | 4922223.039957636 | Unknown（來源未提供／尚未核對） | BQ41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Ion B Mment  mm/cm^3 | 1333.7974458350552 | mm/cm^3 | BR41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Ion B X | 0.7433483900085831 | Unknown（來源未提供／尚未核對） | BS41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Dust Trak Cal Factor (Teom/Dusttrak) | 0.55 | Unknown（來源未提供／尚未核對） | BT41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | MPASS Dilution factor | 1 | Unknown（來源未提供／尚未核對） | BU41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Dust Trak Dilution factor | 1.7328152203064315 | Unknown（來源未提供／尚未核對） | BV41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Particle density g/cc | 0.9 | g/cm^3 | BW41 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-41 | Dilution ratio for Mpass, total flow 1.68576 LPM | n/a | Unknown（來源未提供／尚未核對） | BX41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Dilution ratio for DustTrak B, total flow 1.69076 LPM | 1.7328152203064315 | Unknown（來源未提供／尚未核對） | BY41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | T ( C) - Eq. 2 of lrt | 366.37646783920326 | Unknown（來源未提供／尚未核對） | BZ41 | source_reported_value |
+| PSI-101-ground-drum-408-row-41 | Mass Loss (mg) | N/A | mg | CA41 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Test sequence  | 20a | Unknown（來源未提供／尚未核對） | A42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Sample Type | Silicone | Unknown（來源未提供／尚未核對） | B42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | SAME # | 408a | Unknown（來源未提供／尚未核對） | F42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Description | aged No Drum | Unknown（來源未提供／尚未核對） | G42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Date (EST) | 41152 | Unknown（來源未提供／尚未核對） | I42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Inlet Velocity (cm/sec) | 8.1 | cm/s | K42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Rt/R0 | 1.35 | dimensionless | L42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Duration (sec) | 36 | s | M42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Primary Aging Duration (sec) | 11 | s | N42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Primary Mixing Duration (sec) | 8 | s | O42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | PreAge Thermal Precipitator | n | Unknown（來源未提供／尚未核對） | P42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | PreAge Thermal Precipitator Duration | n/a | Unknown（來源未提供／尚未核對） | Q42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Primary Aging Therm Precip | n | Unknown（來源未提供／尚未核對） | S42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Primary Aging Therm Precip Duration | n/a | Unknown（來源未提供／尚未核對） | T42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Use STS Detector | n | Unknown（來源未提供／尚未核對） | U42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Use Drums (CDE A) | y | Unknown（來源未提供／尚未核對） | V42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Use Comm Diag B | y | Unknown（來源未提供／尚未核對） | W42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Diluting Drums (CDE A) | n | Unknown（來源未提供／尚未核對） | X42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Diluting B | y | Unknown（來源未提供／尚未核對） | Y42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Impactor Inlet on CDB | 10 | Unknown（來源未提供／尚未核對） | AA42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Use P-Trak | y | Unknown（來源未提供／尚未核對） | AB42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Aerosol Concentration To P-Trak | 0.031808713 | Unknown（來源未提供／尚未核對） | AC42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Secondary Diagnostics Volume %  | 58 | % | AE42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Secondary Aging Duration (sec) | 720 | s | AF42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Secondary Mixing Duration (sec) | 5 | s | AG42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | STSDetector | n | Unknown（來源未提供／尚未核對） | AH42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Drums (Comm Diag A) | y | Unknown（來源未提供／尚未核對） | AI42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Comm Diag B | y | Unknown（來源未提供／尚未核對） | AJ42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Diluting Drums (CDE A) | n | Unknown（來源未提供／尚未核對） | AK42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Diluting B | y | Unknown（來源未提供／尚未核對） | AL42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ues PTrak | y | Unknown（來源未提供／尚未核對） | AM42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Aerosol Concentration To P-Trak | 0.031808713 | Unknown（來源未提供／尚未核對） | AN42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | secondary agign thermal precip duration | n | Unknown（來源未提供／尚未核對） | AP42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | ISS Obscuration (volts) | n/a | V | AQ42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | ISS Detector Scatter (volts) | n/a | V | AR42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | STS Detector (volts) | n/a | V | AS42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | STS Detector offset (volts) | n/a | V | AT42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ion A (volts) Drum | n/a | V | AU42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ion A offset V0 (volts)-Drum | n/a | V | AV42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ion B (volts) | 6.700102631578947 | V | AW42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ion B offset V0 (volts) | 4.770253333333334 | V | AX42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ptrak (PT/cc) | 83990 | #/cm^3 | AY42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | DustTrak A (mg/m3) Drum | n/a | mg/m^3 | AZ42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | DustTrak A (mg/m3) Drumoffset | n/a | mg/m^3 | BA42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | DustTrak B (mg/m3) | 110.17119999999997 | mg/m^3 | BB42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Ion B Delta (volts) | 1.929849298245613 | V | BC42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | M0 best Diameter (#/cm3) | 4091621.8207256603 | #/cm^3 | BD42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | M1 (mm/cm3) | 431.58521365906984 | mm/cm^3 | BE42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | (Drum)  offset and dilution corrected | n/a | Unknown（來源未提供／尚未核對） | BF42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | DustTrak A (mg/m3) (Drum)  offset, dilution and Gain corrected | n/a | mg/m^3 | BG42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | DustTrak B calibratred and corrected for dilution (mg/m3) | 102.01739978637579 | mg/m^3 | BH42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | M1/M0 (micro-m)--AMD | 0.10548023071754149 | um | BI42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Diameter of Average mass (micro-m) | 0.37541579776248446 | um | BJ42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | George's d2,1,  (micro-m) | 0.7082446141411839 | um | BK42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | MPASS 3/2 | n/a | Unknown（來源未提供／尚未核對） | BL42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Hatch Choate Sigma g | 3.0855367682475157 | dimensionless | BM42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Hatch Choate Dg | 0.055911395826164355 | Unknown（來源未提供／尚未核對） | BN42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | CPC 100 nm cal, dilution corrected | 4091621.8207256603 | Unknown（來源未提供／尚未核對） | BO42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | CPC 600 nm cal, dilution corrected | 4030890.976318344 | Unknown（來源未提供／尚未核對） | BP42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | CPC 1200 nm cal, dilution corrected | 3651481.627062371 | Unknown（來源未提供／尚未核對） | BQ42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Ion B Mment  mm/cm^3 | 431.58521365906984 | mm/cm^3 | BR42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Ion B X | 0.4283604053639379 | Unknown（來源未提供／尚未核對） | BS42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Dust Trak Cal Factor (Teom/Dusttrak) | 0.55 | Unknown（來源未提供／尚未核對） | BT42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | MPASS Dilution factor | 1 | Unknown（來源未提供／尚未核對） | BU42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Dust Trak Dilution factor | 1.6836176916451324 | Unknown（來源未提供／尚未核對） | BV42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Particle density g/cc | 0.9 | g/cm^3 | BW42 | source_formula_cached_result |
+| PSI-101-ground-drum-408-row-42 | Dilution ratio for Mpass, total flow 1.68576 LPM | n/a | Unknown（來源未提供／尚未核對） | BX42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Dilution ratio for DustTrak B, total flow 1.69076 LPM | 1.6836176916451324 | Unknown（來源未提供／尚未核對） | BY42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | T ( C) - Eq. 2 of lrt | 366.37646783920326 | Unknown（來源未提供／尚未核對） | BZ42 | source_reported_value |
+| PSI-101-ground-drum-408-row-42 | Mass Loss (mg) | N/A | mg | CA42 | source_formula_cached_result |
+
+
+你提供的 Excel 對照見 [FACTOR_MAP.md](../FACTOR_MAP.md)。總表是欄位／因子索引，不能替代本試次的實測數值。無法逐欄匹配者保留 Unknown。
+
+### 感測器狀態與執行分率
+
+| 摘要記錄 | 分率角色 | run原值 | 感測器啟用旗標 |
+| --- | --- | --- | --- |
+| PSI-101-ground-drum-408-row-41 | first_or_primary_fraction | 408 | {"Use STS Detector": {"cell": "U41", "value": "n", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use STS Detector", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "U41"}, "evidence_role": "source_reported_value"}, "Use Drums (CDE A)": {"cell": "V41", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use Drums (CDE A)", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "V41"}, "evidence_role": "source_reported_value"}, "Use Comm Diag B": {"cell": "W41", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use Comm Diag B", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "W41"}, "evidence_role": "source_reported_value"}, "Use P-Trak": {"cell": "AB41", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use P-Trak", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AB41"}, "evidence_role": "source_reported_value"}, "STSDetector": {"cell": "AH41", "value": "n", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "STSDetector", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AH41"}, "evidence_role": "source_reported_value"}, "Drums (Comm Diag A)": {"cell": "AI41", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Drums (Comm Diag A)", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AI41"}, "evidence_role": "source_reported_value"}, "Comm Diag B": {"cell": "AJ41", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Comm Diag B", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AJ41"}, "evidence_role": "source_reported_value"}, "Ues PTrak": {"cell": "AM41", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Ues PTrak", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AM41"}, "evidence_role": "source_reported_value"}} |
+| PSI-101-ground-drum-408-row-42 | aged_fraction | 408a | {"Use STS Detector": {"cell": "U42", "value": "n", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use STS Detector", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "U42"}, "evidence_role": "source_reported_value"}, "Use Drums (CDE A)": {"cell": "V42", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use Drums (CDE A)", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "V42"}, "evidence_role": "source_reported_value"}, "Use Comm Diag B": {"cell": "W42", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use Comm Diag B", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "W42"}, "evidence_role": "source_reported_value"}, "Use P-Trak": {"cell": "AB42", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Use P-Trak", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AB42"}, "evidence_role": "source_reported_value"}, "STSDetector": {"cell": "AH42", "value": "n", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "STSDetector", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AH42"}, "evidence_role": "source_reported_value"}, "Drums (Comm Diag A)": {"cell": "AI42", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Drums (Comm Diag A)", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AI42"}, "evidence_role": "source_reported_value"}, "Comm Diag B": {"cell": "AJ42", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Comm Diag B", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AJ42"}, "evidence_role": "source_reported_value"}, "Ues PTrak": {"cell": "AM42", "value": "y", "formula": null, "raw_xml_formula": null, "formula_attributes": null, "type": "s", "style_id": "1273", "status": "valid", "raw_header": "Ues PTrak", "unit": null, "source_ref": {"file_id": "PSI-101-6d3a539ccf425b1f", "path": "C:\\Users\\User\\Documents\\ChatGPT\\Nasa Hackathon\\NASA_同事分享包_20261114\\01_實驗資料\\第一批下載\\PSI-101_SAME-R\\Analyzed Data\\PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx", "sha256": "6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218", "sheet": "Drum 8-2012", "cell": "AM42"}, "evidence_role": "source_reported_value"}} |
+
+
+Unknown；此處沒有補入推測值。
+
+
+## 多個結論與適用範圍
+
+| 判讀 | 證據層次 | 共同與不同之處 |
+| --- | --- | --- |
+| 此身份分組含 2 筆來源摘要記錄；分率／執行身份仍以來源標籤與衝突表為準。 | 資料稽核結論 | 同 baseRun 不代表每筆都是獨立產煙事件。 |
+| 可追到上表數值的欄位共有 140 項；單位未提供時不轉換、不補 0。 | 原始欄位／快取判讀 | 同名粒徑可能來自不同矩、密度與儀器量測範圍，必須先對定義。 |
+| 本試次與出版品的逐列身份對應，以明列的 exact_trial_ids 為限；其他連結僅為 campaign context。 | 文獻連結邊界 | 共用研究、材料或儀器不足以認定使用同一數據。 |
+| 矩反演／PSD重建若重用了原量測矩，只能視為計算診斷，不能再把它當獨立預測成功。 | 物理／識別限制 | 需要未參與反演的尺寸分布、儀器響應或另一事件才能驗證外推。 |
+
+Unknown；此處沒有補入推測值。
+
+
+## 公式結果與實驗值的視覺化工具
+
+程式名稱：`tools/smoke_evidence/physics.py`、`tools/smoke_evidence/viewer.js`；入口 `viewer.html`。
+
+[開啟此試次的矩與來源快取比較](<../viewer/viewer.html?trial=PSI-101-ground-drum-408&view=moments>) · [檢查時間訊號／感測器狀態](<../viewer/viewer.html?trial=PSI-101-ground-drum-408&view=traces>)
+
+展示狀態必須區分來源計算重現、同源反演重建、條件診斷、作者模擬與獨立預測。缺單位、越域或未使用的實驗目標不足時，該比較顯示 Unknown／Invalid，而非補出曲線。詳細公式見 [MODELS.md](../MODELS.md)。
+
+### 本試次已執行的固定公式結果
+
+來源尚未提供可核對的項目；不填成 0。
+
+
+上述差值僅檢查已知公式與來源快取的數值重現，不是量測誤差、消防安全誤差或獨立模型預測分數。密度／校正等來源假設與各輸出的可計算性須保留；整體資格 Unknown 不會被改成安全 Pass。
+
+- {"record_id": "PSI-101-ground-drum-408-row-41", "equation_ids": ["SMOKE-MOMENT-RATIOS", "SMOKE-LOGNORMAL-INVERSE"], "eligible_role": "same_source_equation_diagnostic_only", "raw_inversion_validation": false, "independent_validation_target": false}
+- {"record_id": "PSI-101-ground-drum-408-row-42", "equation_ids": ["SMOKE-MOMENT-RATIOS", "SMOKE-LOGNORMAL-INVERSE"], "eligible_role": "same_source_equation_diagnostic_only", "raw_inversion_validation": false, "independent_validation_target": false}
+
+
+## 消防 insight 與下一驗證
+
+- **預防**：材料標籤與熱史可用來設計過熱煙情境；不能從煙粒徑單獨判定材料不會燃燒。
+- **偵測**：必須同時保存材料、流動、老化、儀器校正／量測範圍及供電。斷電的 alarm 0 不是無煙；飽和限制幅度量化，但不自動否定已啟用警報事件。
+- **撲滅／抑制後監測**：煙霧與訊號可能隨輸運／老化改變；本試次不是滅火劑噴放試驗，不能給出劑量、再燃機率或安全重啟時間。
+
+上述是依量測定義提出的研究需求。具體產品構想、地球差異與驗證缺口見 [跨資料集整合](../SMOKE_SYNTHESIS.md)，不是已核准操作程序。
+
+### 已知與未知
+
+- Actual independent smoke-generation count is not inferred from fraction rows.
+- Ambient oxygen composition, chamber temperature and absolute pressure are not supplied by these summary headers.
+- Absence of a mapped telemetry file does not establish no data exist.
+
+
+## 原始來源與再現定位
+
+| 本機原始檔 | 資料角色 | 身份連結依據與資格 | SHA256 |
+| --- | --- | --- | --- |
+| [PSI-101-6d3a539ccf425b1f](<C:/Users/User/Documents/ChatGPT/Nasa Hackathon/NASA_同事分享包_20261114/01_實驗資料/第一批下載/PSI-101_SAME-R/Analyzed Data/PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx>) | Analyzed Data | method=\["canonical summary row Drum 8-2012!41", "canonical summary row Drum 8-2012!42"\]; status=\["source_identity_confirmed", "source_identity_confirmed"\] | 6d3a539ccf425b1fa8edc19cc75d828f57d650c7ce734d4e7aa686fea9593218 |
+
+
+結構化完整記錄：`qa/trial_records.json` 的 `PSI-101-ground-drum-408`。原始資料只讀；本 Markdown 不改寫來源公式、快取或身份衝突。
