@@ -23,7 +23,7 @@ Normal startup requires a server-side `OPENAI_API_KEY`. The Cloudflare deploymen
 
 ## Cloudflare deployment target
 
-This package preserves the Python/scipy backend using **Cloudflare Workers + Containers**. It is not a static Pages-only app. `Dockerfile` restores hash-pinned data, and `wrangler.jsonc` defines one container-backed Durable Object. The public Worker enforces same-origin requests, a small POST body limit, a global 30-POST/hour demo cap and serial search processing. The original backend keeps its loopback Host restrictions behind an authenticated container ingress.
+This package preserves the Python/scipy backend using **Cloudflare Workers + Containers**. It is not a static Pages-only app. `Dockerfile` restores hash-pinned data, and `wrangler.jsonc` defines one container-backed Durable Object. The public Worker enforces same-origin requests, a small POST body limit, a shared 300-AI-query/hour demo cap; blank-query scene browsing and numerical slider comparisons do not consume that quota and serial search processing. The original backend keeps its loopback Host restrictions behind an authenticated container ingress.
 
 Deployment requires a Cloudflare account with Containers support, Docker, current Node/npm and Wrangler. From this checkout:
 

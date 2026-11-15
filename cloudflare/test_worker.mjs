@@ -62,4 +62,35 @@ for (const active of [
   const matching = active.image==='synthetic-image' && active.labels.profile==='concise-medium-v1';
   assert.deepEqual(events,matching ? [] : ['destroy','stopped','start']);
 }
-console.log(JSON.stringify({status:'PASS',contracts:9,live_cloudflare:false,live_openai:false}));
+// Browsing and numerical comparisons remain usable when paid-search quota
+// is exhausted. Only nonempty AI searches consume the bounded shared budget.
+const hour = Math.floor(Date.now() / 3600000);
+let quota = {hour, count:300};
+let quotaWrites = 0;
+const quotaCtx = {...ctx,storage:{transaction:async callback=>callback({
+  get:async()=>quota,
+  put:async(key,value)=>{quota=value;quotaWrites++;}
+})}};
+const limited = new FlameContainer(quotaCtx,env);
+const post = (path,body)=>new Request('https://demo.test'+path,{method:'POST',
+  headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+assert.equal((await limited.fetch(post('/api/workspace/search',{query:''}))).status,200);
+assert.equal((await limited.fetch(post('/api/workspace/search',{query:'   '}))).status,200);
+assert.equal((await limited.fetch(post('/api/workspace/search',{}))).status,200);
+assert.equal((await limited.fetch(post('/api/liquid/compare',{fuel:'heptane',diameter:3}))).status,200);
+assert.equal(quotaWrites,0);
+const denied = await limited.fetch(post('/api/workspace/search',{query:'heptane extinction'}));
+assert.equal(denied.status,429);
+assert.equal((await denied.json()).code,'ai_search_rate_limit');
+assert(Number(denied.headers.get('Retry-After'))>=1);
+assert(Number(denied.headers.get('Retry-After'))<=3600);
+assert.equal(quotaWrites,0);
+quota={hour,count:299};
+assert.equal((await limited.fetch(post('/api/workspace/search',{query:'heptane extinction'}))).status,200);
+assert.equal(quota.count,300);
+assert.deepEqual(JSON.parse(await forwarded.text()),{query:'heptane extinction'});
+assert.equal((await limited.fetch(post('/api/workspace/search',{query:'heptane extinction'}))).status,429);
+quota={hour:hour-1,count:300};
+assert.equal((await limited.fetch(post('/api/workspace/search',{query:'heptane extinction'}))).status,200);
+assert.deepEqual(quota,{hour,count:1});
+console.log(JSON.stringify({status:'PASS',contracts:13,live_cloudflare:false,live_openai:false}));

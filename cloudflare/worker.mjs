@@ -1,6 +1,23 @@
 import { DurableObject } from 'cloudflare:workers';
 
 const CONTAINER_PROFILE = 'concise-medium-v1';
+const AI_SEARCHES_PER_HOUR = 300;
+
+async function consumesAIQuota(request) {
+  const path = new URL(request.url).pathname;
+  if (path === '/api/liquid/compare') return false;
+  if (path === '/api/workspace/search') {
+    try {
+      // The public gateway already enforces the 32 KiB body cap. Clone so
+      // reading the small JSON here does not consume the forwarded request.
+      const payload = await request.clone().json();
+      if (payload && typeof payload === 'object' && !Array.isArray(payload) &&
+          (payload.query === undefined || (typeof payload.query === 'string' && !payload.query.trim())))
+        return false;
+    } catch {} // Invalid JSON remains subject to normal backend validation.
+  }
+  return true;
+}
 
 export class FlameContainer extends DurableObject {
   starting;
@@ -38,15 +55,22 @@ export class FlameContainer extends DurableObject {
     // Serialize complete searches: the retained AI service admits one call at
     // a time. Static requests do not wait for this queue.
     if (request.method === 'POST') {
-      const hour = Math.floor(Date.now() / 3600000);
-      const accepted = await this.ctx.storage.transaction(async txn => {
-        const old = await txn.get('demo-hourly-requests');
-        const count = old?.hour === hour ? old.count : 0;
-        if (count >= 30) return false;
-        await txn.put('demo-hourly-requests', {hour, count: count + 1});
-        return true;
-      });
-      if (!accepted) return Response.json({error: 'Demo API hourly limit reached.'}, {status: 429});
+      if (await consumesAIQuota(request)) {
+        const hour = Math.floor(Date.now() / 3600000);
+        const accepted = await this.ctx.storage.transaction(async txn => {
+          const old = await txn.get('demo-hourly-requests');
+          const count = old?.hour === hour ? old.count : 0;
+          if (count >= AI_SEARCHES_PER_HOUR) return false;
+          await txn.put('demo-hourly-requests', {hour, count: count + 1});
+          return true;
+        });
+        if (!accepted) {
+          const retry = Math.max(1, Math.ceil(((hour + 1) * 3600000 - Date.now()) / 1000));
+          return Response.json({error: 'AI search hourly limit reached. Browsing and sliders remain available.',
+            code: 'ai_search_rate_limit', retry_after_seconds: retry},
+            {status: 429, headers: {'Retry-After': String(retry)}});
+        }
+      }
       const work = this.tail.then(() => this.forward(request));
       this.tail = work.catch(() => {});
       return work;

@@ -176,5 +176,19 @@
       "K_avg_mm2_s_after": 0.428,
       "status": "PASS"
     }
+  },
+  "search_quota_fix": {
+    "confirmed_original_error": {
+      "http_status": 429,
+      "message": "Demo API hourly limit reached."
+    },
+    "old_shared_limit": 30,
+    "new_shared_ai_searches_per_hour": 300,
+    "blank_scene_browsing_consumes_quota": false,
+    "liquid_numeric_comparison_consumes_quota": false,
+    "gateway_contracts_passed": 13,
+    "workspace_cases_passed": 56,
+    "public_search_recovered_after_hour_reset": true,
+    "new_release_live_retest": "pending"
   }
 }
