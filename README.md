@@ -44,6 +44,8 @@ The original 8793 physics helper and 8784 frozen semantic service were not liste
 
 Public demo: https://flame-atlas.hank098173.workers.dev/
 
+Current speed release: the same live query completed in 19.281 seconds, then 4.485 seconds on an immediate repeat with both validated caches hit. Final synthesis remained medium on the standard tier; query planning used low. See `research/LIVE_LATENCY_ACCEPTANCE_20261115.json`. These are single-query measurements, not a guaranteed response time.
+
 ## Official deployment references
 
 - https://developers.cloudflare.com/containers/get-started/

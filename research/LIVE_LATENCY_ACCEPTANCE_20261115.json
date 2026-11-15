@@ -1,0 +1,142 @@
+{
+  "build_marker": "summary-latency-20261115",
+  "query": {
+    "habitat": "space_station",
+    "fire_type": "auto",
+    "world": "moon",
+    "query": "n-heptane cool flame extinction"
+  },
+  "results": [
+    {
+      "run": "first",
+      "status": 200,
+      "elapsed_seconds": 19.281,
+      "method": "openai_markdown_synthesis",
+      "generated": true,
+      "environment": "Isolated n-heptane droplets were burned in the ISS droplet-combustion apparatus under microgravity.",
+      "answer": "After radiative hot-flame extinction, low-temperature chemistry sustained n-heptane cool burning until diffusive extinction. Because visible disappearance precedes combustion termination, detection should not equate loss of visible flame with complete extinction.",
+      "words": 42,
+      "provider_status": {
+        "provider": "openai_responses",
+        "model": "gpt-6.1-sol",
+        "configured": true,
+        "credential_present": true,
+        "last_call_succeeded": true,
+        "last_error": null,
+        "training_performed": false,
+        "scientific_entailment_verified": false,
+        "reasoning_effort": "medium",
+        "requested_service_tier": "default",
+        "last_response_metadata": {
+          "model": "gpt-6.1-sol",
+          "reasoning_effort": "medium",
+          "requested_service_tier": "default",
+          "actual_service_tier": "default",
+          "latency_seconds": 10.481,
+          "input_tokens": 6503,
+          "output_tokens": 748
+        },
+        "synthesis_cache_hit": false,
+        "fresh_api_call": true
+      },
+      "understanding_status": {
+        "provider": "openai_responses",
+        "model": "gpt-6.1-sol",
+        "configured": true,
+        "credential_present": true,
+        "last_call_succeeded": true,
+        "last_error": null,
+        "training_performed": false,
+        "scientific_entailment_verified": false,
+        "reasoning_effort": "medium",
+        "requested_service_tier": "default",
+        "last_response_metadata": {
+          "model": "gpt-6.1-sol",
+          "reasoning_effort": "low",
+          "requested_service_tier": "default",
+          "actual_service_tier": "default",
+          "latency_seconds": 4.861,
+          "input_tokens": 641,
+          "output_tokens": 202
+        },
+        "query_cache_hit": false
+      },
+      "documents": 12,
+      "charts": 10,
+      "markdown_sources": [
+        {
+          "id": "MD-da828422711c2b92",
+          "sha256": "da828422711c2b92a5f7747c07e95328cb497dede641cec95a6a11860ce81743"
+        }
+      ]
+    },
+    {
+      "run": "repeat",
+      "status": 200,
+      "elapsed_seconds": 4.485,
+      "method": "openai_markdown_synthesis",
+      "generated": true,
+      "environment": "Isolated n-heptane droplets were burned in the ISS droplet-combustion apparatus under microgravity.",
+      "answer": "After radiative hot-flame extinction, low-temperature chemistry sustained n-heptane cool burning until diffusive extinction. Because visible disappearance precedes combustion termination, detection should not equate loss of visible flame with complete extinction.",
+      "words": 42,
+      "provider_status": {
+        "provider": "openai_responses",
+        "model": "gpt-6.1-sol",
+        "configured": true,
+        "credential_present": true,
+        "last_call_succeeded": true,
+        "last_error": null,
+        "training_performed": false,
+        "scientific_entailment_verified": false,
+        "reasoning_effort": "medium",
+        "requested_service_tier": "default",
+        "last_response_metadata": {
+          "model": "gpt-6.1-sol",
+          "reasoning_effort": "medium",
+          "requested_service_tier": "default",
+          "actual_service_tier": "default",
+          "latency_seconds": 10.481,
+          "input_tokens": 6503,
+          "output_tokens": 748
+        },
+        "synthesis_cache_hit": true,
+        "fresh_api_call": false,
+        "synthesis_cache_age_seconds": 4.505
+      },
+      "understanding_status": {
+        "provider": "openai_responses",
+        "model": "gpt-6.1-sol",
+        "configured": true,
+        "credential_present": true,
+        "last_call_succeeded": true,
+        "last_error": null,
+        "training_performed": false,
+        "scientific_entailment_verified": false,
+        "reasoning_effort": "medium",
+        "requested_service_tier": "default",
+        "last_response_metadata": {
+          "model": "gpt-6.1-sol",
+          "reasoning_effort": "low",
+          "requested_service_tier": "default",
+          "actual_service_tier": "default",
+          "latency_seconds": 4.861,
+          "input_tokens": 641,
+          "output_tokens": 202
+        },
+        "query_cache_hit": true
+      },
+      "documents": 12,
+      "charts": 10,
+      "markdown_sources": [
+        {
+          "id": "MD-da828422711c2b92",
+          "sha256": "da828422711c2b92a5f7747c07e95328cb497dede641cec95a6a11860ce81743"
+        }
+      ]
+    }
+  ],
+  "code_commit": "3e422683c3ea68b970cad6ccaddadf5340262e5d",
+  "targeted_tests_passed": 82,
+  "files_verified": 609,
+  "measurement_scope": "One live n-heptane query, first and immediate repeat; timings include network and retrieval and are not a universal latency guarantee."
+}
