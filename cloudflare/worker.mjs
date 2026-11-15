@@ -1,16 +1,25 @@
 import { DurableObject } from 'cloudflare:workers';
 
+const CONTAINER_PROFILE = 'concise-medium-v1';
+
 export class FlameContainer extends DurableObject {
   starting;
   tail = Promise.resolve();
 
   async ready() {
     const container = this.ctx.container;
+    if (container.running) {
+      const active = await container.inspect();
+      if (!active || active.image !== container.images.base || active.labels?.profile !== CONTAINER_PROFILE)
+        await container.destroy();
+    }
     if (!container.running) {
       container.start({image: container.images.base, instance: 'standard-1', enableInternet: true,
+        labels: {profile: CONTAINER_PROFILE},
         env: {OPENAI_API_KEY: this.env.OPENAI_API_KEY, FLAME_PROXY_TOKEN: this.env.FLAME_PROXY_TOKEN,
           NASA_AI_PROVIDER: 'openai', NASA_AI_MODEL: 'gpt-6.1-sol',
-          NASA_OPENAI_REASONING_EFFORT: 'max', NASA_OPENAI_SERVICE_TIER: 'default'}});
+          NASA_OPENAI_REASONING_EFFORT: 'medium', NASA_OPENAI_SERVICE_TIER: 'default',
+          NASA_OPENAI_MAX_OUTPUT_TOKENS: '4096', NASA_AI_TIMEOUT_SECONDS: '45'}});
     }
     await container.setInactivityTimeout(300000);
     for (let attempt = 0; attempt < 100; attempt++) {

@@ -100,7 +100,7 @@
   "python_contracts": 204,
   "javascript_cases": 55,
   "packaging_contracts": 5,
-  "cloudflare_mock_contracts": 6,
+  "cloudflare_mock_contracts": 9,
   "live_cloudflare": true,
   "live_openai": true,
   "live_acceptance": {
@@ -121,5 +121,14 @@
     "standard_tier_retest": "pending",
     "scientific_quality_expert_review": "pending"
   },
-  "paid_api_calls_scope": "0 refers to the offline relocated/package verification above; live acceptance below made paid API calls."
+  "paid_api_calls_scope": "0 refers to the offline relocated/package verification above; live acceptance below made paid API calls.",
+  "concise_release": {
+    "reasoning_effort": "medium",
+    "service_tier": "default",
+    "visible_summary_word_target": 65,
+    "targeted_markdown_tests": 6,
+    "gateway_contracts": 9,
+    "hot_container_profile": "concise-medium-v1",
+    "live_retest": "pending"
+  }
 }

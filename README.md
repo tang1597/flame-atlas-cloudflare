@@ -19,7 +19,7 @@ python run.py --check --ai-mode off
 python run.py --port 8820
 ```
 
-Normal startup requires a server-side `OPENAI_API_KEY`. The Cloudflare deployment uses `gpt-6.1-sol`, max effort and the standard (`default`) service tier. It receives relevant source papers plus retrieved dataset Markdown, generates two concise query-level paragraphs, and validates source IDs, exact evidence spans and numeric claims. These checks are not proof of scientific entailment. API errors use an explicitly labeled reviewed fallback; A live n-heptane query successfully generated a Markdown-grounded summary; scientific answer quality still needs expert review. `--ai-mode off` is only the explicit offline acceptance mode.
+Normal startup requires a server-side `OPENAI_API_KEY`. The Cloudflare deployment uses `gpt-6.1-sol`, medium reasoning effort for concise answers and the standard (`default`) service tier. It receives relevant source papers plus retrieved dataset Markdown, generates two concise query-level paragraphs, and validates source IDs, exact evidence spans and numeric claims. These checks are not proof of scientific entailment. API errors use an explicitly labeled reviewed fallback. A live n-heptane query successfully generated a Markdown-grounded summary; scientific answer quality still needs expert review. `--ai-mode off` is only the explicit offline acceptance mode.
 
 ## Cloudflare deployment target
 
@@ -40,7 +40,7 @@ The original 8793 physics helper and 8784 frozen semantic service were not liste
 
 ## Validation
 
-204 Python contracts, 55 JavaScript cases, 5 packaging contracts and 6 synthetic Cloudflare gateway contracts passed. Complete and split ZIPs produced identical relocated files. A new local instance loaded the 370-record index, liquid catalog, habitat/strategy routes and PMMA/heptane/smoke searches with linked numeric charts. See `VALIDATION.json`. The Cloudflare build produced and deployed the Docker image successfully. The public app and data endpoints returned HTTP 200. A live n-heptane query returned 12 papers, 10 chart links and `openai_markdown_synthesis`, citing a dataset Markdown note. That pre-standard-switch Fast/max request took 83.5 seconds end to end (59.488 seconds synthesis). Standard-tier deployment acceptance is recorded separately when completed.
+204 Python contracts, 55 JavaScript cases, 5 packaging contracts and 9 synthetic Cloudflare gateway contracts passed. Complete and split ZIPs produced identical relocated files. A new local instance loaded the 370-record index, liquid catalog, habitat/strategy routes and PMMA/heptane/smoke searches with linked numeric charts. See `VALIDATION.json`. The Cloudflare build produced and deployed the Docker image successfully. The public app and data endpoints returned HTTP 200. A live n-heptane query returned 12 papers, 10 chart links and `openai_markdown_synthesis`, citing a dataset Markdown note. That pre-standard-switch Fast/max request took 83.5 seconds end to end (59.488 seconds synthesis). Standard-tier deployment acceptance is recorded separately when completed.
 
 Public demo: https://flame-atlas.hank098173.workers.dev/
 
