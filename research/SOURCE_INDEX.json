@@ -1,0 +1,483 @@
+{
+  "source_tables": [
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-100_SAFFIRE-III/Experimental table/PSI-100_Experimental table_SAFFIRE-3.csv",
+      "referenced_rows": 2,
+      "expected_sha256": [
+        "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/4d3c717ec20dd024_PSI-100_Experimental table_SAFFIRE-3.csv",
+      "bytes": 239,
+      "sha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-101_SAME-R/Experimental table/PSI-101_Experimental table_SAME-R.csv",
+      "referenced_rows": 109,
+      "expected_sha256": [
+        "87164b7dc9168a4273c159f7a9f23699afbd06ad97b77974377e79b9bf8a3bef"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/87164b7dc9168a42_PSI-101_Experimental table_SAME-R.csv",
+      "bytes": 5674,
+      "sha256": "87164b7dc9168a4273c159f7a9f23699afbd06ad97b77974377e79b9bf8a3bef",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-102_SAME/Experimental table/PSI-102_Experimental table_SAME.csv",
+      "referenced_rows": 8,
+      "expected_sha256": [
+        "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/268d1e121d2f211b_PSI-102_Experimental table_SAME.csv",
+      "bytes": 331,
+      "sha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-106_SLICE/Experimental table/PSI-106_Experimental table_Slice.csv",
+      "referenced_rows": 12,
+      "expected_sha256": [
+        "89ef980810ca6d9aa8be817b42e36cd2adff23f5e9058361b5a33d18b4363f4d"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/89ef980810ca6d9a_PSI-106_Experimental table_Slice.csv",
+      "bytes": 734,
+      "sha256": "89ef980810ca6d9aa8be817b42e36cd2adff23f5e9058361b5a33d18b4363f4d",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-107_SPICE/Experimental table/PSI-107_Experimental table_Spice.csv",
+      "referenced_rows": 469,
+      "expected_sha256": [
+        "fb0d7e60cf5367afb429089e9901d27288f78038efd26c8de1db4fbe04117136"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/fb0d7e60cf5367af_PSI-107_Experimental table_Spice.csv",
+      "bytes": 31205,
+      "sha256": "fb0d7e60cf5367afb429089e9901d27288f78038efd26c8de1db4fbe04117136",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-10_ACME_Flame Design/Experimental table/PSI-10_Experimental table_Flame Design_Inverse Flame.csv",
+      "referenced_rows": 120,
+      "expected_sha256": [
+        "97933ee9ae0b9ebc6b948a67485a0fe2f8218f753253a4f2be93c40d374c44e4"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/97933ee9ae0b9ebc_PSI-10_Experimental table_Flame Design_Inverse Flame.csv",
+      "bytes": 17314,
+      "sha256": "97933ee9ae0b9ebc6b948a67485a0fe2f8218f753253a4f2be93c40d374c44e4",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-10_ACME_Flame Design/Experimental table/PSI-10_Experimental table_Flame Design_Normal Flame.csv",
+      "referenced_rows": 207,
+      "expected_sha256": [
+        "4a663292bd3f65201943cc71bd661a70383639276a9176f64105b285bf0b6deb"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/4a663292bd3f6520_PSI-10_Experimental table_Flame Design_Normal Flame.csv",
+      "bytes": 26933,
+      "sha256": "4a663292bd3f65201943cc71bd661a70383639276a9176f64105b285bf0b6deb",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-159_ACME CFI-G/Experimental table/PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+      "referenced_rows": 154,
+      "expected_sha256": [
+        "d4d44f8b9896936728748e34d1b6ad0812032a92fa5289599b708c138e3a9b39"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/d4d44f8b98969367_PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+      "bytes": 39422,
+      "sha256": "d4d44f8b9896936728748e34d1b6ad0812032a92fa5289599b708c138e3a9b39",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-159_ACME CFI-G/Experimental table/PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+      "referenced_rows": 179,
+      "expected_sha256": [
+        "d95a621c3fbd27d204dd32ed29fa17d68f2b779d6a523cde8479ed7ebaa5251a"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/d95a621c3fbd27d2_PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+      "bytes": 22166,
+      "sha256": "d95a621c3fbd27d204dd32ed29fa17d68f2b779d6a523cde8479ed7ebaa5251a",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-20_ACME BRE/Experimental table/PSI-20_Experimental table_ACME BRE.csv",
+      "referenced_rows": 43,
+      "expected_sha256": [
+        "4aa5d3f98708ceacced5c620d46858b9965f8d4d941b203229f46467d53e5ab7"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/4aa5d3f98708ceac_PSI-20_Experimental table_ACME BRE.csv",
+      "bytes": 1113,
+      "sha256": "4aa5d3f98708ceacced5c620d46858b9965f8d4d941b203229f46467d53e5ab7",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-21_ACME CLD Flame/Experimental table/PSI-21_Experimental table_CLD Flame.csv",
+      "referenced_rows": 32,
+      "expected_sha256": [
+        "9fafbc5b3dddaf715ce8025ed9154ce297803f7b69a935f077ec26c8249e44c0"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/9fafbc5b3dddaf71_PSI-21_Experimental table_CLD Flame.csv",
+      "bytes": 2454,
+      "sha256": "9fafbc5b3dddaf715ce8025ed9154ce297803f7b69a935f077ec26c8249e44c0",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-22_ACME E-FIELD Flames/Experimental table/PSI-22_Experimental table_ACME E-FIELD Flames.csv",
+      "referenced_rows": 21,
+      "expected_sha256": [
+        "69090c357b83ae38d161d29001d1d32b40fd77b13324ca6585ee990cdceef524"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/69090c357b83ae38_PSI-22_Experimental table_ACME E-FIELD Flames.csv",
+      "bytes": 2475,
+      "sha256": "69090c357b83ae38d161d29001d1d32b40fd77b13324ca6585ee990cdceef524",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-23_ACME s-Flame/Experimental table/PSI-23_Experimental table_ACME s-Flame.csv",
+      "referenced_rows": 41,
+      "expected_sha256": [
+        "16cd10f50bd2e962887c8eb4077e5a9b3e790c78de8e0361c0b77e19300be7cf"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/16cd10f50bd2e962_PSI-23_Experimental table_ACME s-Flame.csv",
+      "bytes": 2456,
+      "sha256": "16cd10f50bd2e962887c8eb4077e5a9b3e790c78de8e0361c0b77e19300be7cf",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-25_BASS-II/Experimental table/PSI-25_Experimental table_BASS-II.csv",
+      "referenced_rows": 129,
+      "expected_sha256": [
+        "71e792bf6b5fb5ea620c5dd70fbbac05515992e12aefcf5dff47312caa48c042"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/71e792bf6b5fb5ea_PSI-25_Experimental table_BASS-II.csv",
+      "bytes": 16590,
+      "sha256": "71e792bf6b5fb5ea620c5dd70fbbac05515992e12aefcf5dff47312caa48c042",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-26_BASS/Experimental table/PSI-26_Experimental table_BASS.csv",
+      "referenced_rows": 122,
+      "expected_sha256": [
+        "ccfc3c54d948b64a1c5d2596a63c7c8019e51df0c91a1d62f039f48fa28c300f"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/ccfc3c54d948b64a_PSI-26_Experimental table_BASS.csv",
+      "bytes": 4726,
+      "sha256": "ccfc3c54d948b64a1c5d2596a63c7c8019e51df0c91a1d62f039f48fa28c300f",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-68_FLEX-2/Experimental table/PSI-68_Experimental table_Flex2.csv",
+      "referenced_rows": 64,
+      "expected_sha256": [
+        "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/cc57ad1bd9977aa1_PSI-68_Experimental table_Flex2.csv",
+      "bytes": 1029,
+      "sha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-69_FLEX/Experimental table/PSI-69_Experimental table_FLEX.csv",
+      "referenced_rows": 274,
+      "expected_sha256": [
+        "37c88ce8ae9391b7544ff630a45ce87543d04d317cdbfbed104fe7d5c27e1b96"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/37c88ce8ae9391b7_PSI-69_Experimental table_FLEX.csv",
+      "bytes": 24776,
+      "sha256": "37c88ce8ae9391b7544ff630a45ce87543d04d317cdbfbed104fe7d5c27e1b96",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-98_SAFFIRE-I/Experimental table/PSI-98_Experimental table_SAFFIRE-1.csv",
+      "referenced_rows": 2,
+      "expected_sha256": [
+        "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/c01f29c62455f0a3_PSI-98_Experimental table_SAFFIRE-1.csv",
+      "bytes": 469,
+      "sha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "01_實驗資料/第一批下載/PSI-99_SAFFIRE-II/Experimental table/PSI-99_Experimental table_SAFFIRE-2.csv",
+      "referenced_rows": 11,
+      "expected_sha256": [
+        "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/3c24390b9ef86f3d_PSI-99_Experimental table_SAFFIRE-2.csv",
+      "bytes": 1973,
+      "sha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "03_其他文件/其他研究文件_正文類型待確認/第一批下載/PSI-26_BASS/Science Documents/PSI-26_Science Documents_As Run_Test Matrix.xlsx",
+      "referenced_rows": 0,
+      "expected_sha256": [],
+      "roles": [
+        "supplementary_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/850910541fc9c802_PSI-26_Science Documents_As Run_Test Matrix.xlsx",
+      "bytes": 111886,
+      "sha256": "850910541fc9c802d00aa9de14758205103642184249b419c09868df2fbea6e8",
+      "matches_all_recorded_versions": true
+    },
+    {
+      "source_relative_path": "03_其他文件/其他研究文件_正文類型待確認/第一批下載/PSI-39_CFI/Science Documents/PSI-39_Science Documents_CFI_DataSummary_Spreadsheet_Jan2021.xlsx",
+      "referenced_rows": 226,
+      "expected_sha256": [
+        "a5b04b6a32bda764a9b367e491cc46b78ad0af0ac6b5e723e63b57abdb1d7dd8"
+      ],
+      "roles": [
+        "standardized_csv_source_table"
+      ],
+      "status": "copied",
+      "package_path": "raw_tables/a5b04b6a32bda764_PSI-39_Science Documents_CFI_DataSummary_Spreadsheet_Jan2021.xlsx",
+      "bytes": 208743,
+      "sha256": "a5b04b6a32bda764a9b367e491cc46b78ad0af0ac6b5e723e63b57abdb1d7dd8",
+      "matches_all_recorded_versions": true
+    }
+  ],
+  "derivation_inputs": [
+    {
+      "source_relative_path": "output/demo_20261113_1800/data/literature-data.json",
+      "expected_sha256": "d67ad520063f4d473cfc065209bc2f023cc9d708539f6aa8797018fc01524410",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "d67ad520063f4d473cfc065209bc2f023cc9d708539f6aa8797018fc01524410",
+      "package_path": "derivation_inputs/output/demo_20261113_1800/data/literature-data.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/peer_archive_review_20261115/integration_payload.json",
+      "expected_sha256": "1576efa197433573035d29c56fb05653a48ae2a6c829d6b3616b7caabdd603f1",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "1576efa197433573035d29c56fb05653a48ae2a6c829d6b3616b7caabdd603f1",
+      "package_path": "derivation_inputs/output/peer_archive_review_20261115/integration_payload.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/solid_combustion_evidence_20261115/library.json",
+      "expected_sha256": "d9bbade99413535089fb2814cb3ca14cbc2c0c3baf21e7506f3dbc30acd1dccb",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "d9bbade99413535089fb2814cb3ca14cbc2c0c3baf21e7506f3dbc30acd1dccb",
+      "package_path": "derivation_inputs/output/solid_combustion_evidence_20261115/library.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/gas_combustion_evidence_20261115/library.json",
+      "expected_sha256": "dfa82c42930fa5e867734d801ae7ad2313a43e3877c95ce25057d9cfcd216297",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "dfa82c42930fa5e867734d801ae7ad2313a43e3877c95ce25057d9cfcd216297",
+      "package_path": "derivation_inputs/output/gas_combustion_evidence_20261115/library.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/peer_archive_review_20261115/reviews/liquid_source_audit/source_manifest.json",
+      "expected_sha256": "3e926cdb57d1ea243a09ff7f3951a09f9bf7dd60321f928a868a159c4c72b3d4",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "3e926cdb57d1ea243a09ff7f3951a09f9bf7dd60321f928a868a159c4c72b3d4",
+      "package_path": "derivation_inputs/output/peer_archive_review_20261115/reviews/liquid_source_audit/source_manifest.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/liquid_combustion_evidence_20261115/literature/cfi_literature.json",
+      "expected_sha256": "87d764f52cb27ffea8c7889aa71746057f0cacbd1dfe8a82f72328f55135b403",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "87d764f52cb27ffea8c7889aa71746057f0cacbd1dfe8a82f72328f55135b403",
+      "package_path": "derivation_inputs/output/liquid_combustion_evidence_20261115/literature/cfi_literature.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/smoke_dataset_markdown_20261115/qa/literature_inventory.json",
+      "expected_sha256": "cd4585bff39b1bf58346ad631eb3cabe9cb8194a5f6316aa3462e6d68ab32e7c",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "cd4585bff39b1bf58346ad631eb3cabe9cb8194a5f6316aa3462e6d68ab32e7c",
+      "package_path": "derivation_inputs/output/smoke_dataset_markdown_20261115/qa/literature_inventory.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/habitat_fire_atlas_20261115/habitat_fire_mapping.json",
+      "expected_sha256": "289c44120b3819c51c89e4372795973e99ea65f8fd5840f740faceb08d9fc11a",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "289c44120b3819c51c89e4372795973e99ea65f8fd5840f740faceb08d9fc11a",
+      "package_path": "derivation_inputs/output/habitat_fire_atlas_20261115/habitat_fire_mapping.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/fire_strategy_priorities_20261115/strategy_catalog.json",
+      "expected_sha256": "63adef0b289007b765954980ca3fbfc340a6351bbfa4af0123507c90fe188f2f",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "63adef0b289007b765954980ca3fbfc340a6351bbfa4af0123507c90fe188f2f",
+      "package_path": "derivation_inputs/output/fire_strategy_priorities_20261115/strategy_catalog.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/solid_combustion_evidence_20261115/models/comparison_payload.json",
+      "expected_sha256": "7d5348202b623dbd13375915bb7ab19c9f6cc85e73708b71b79fa8c424c8287e",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "7d5348202b623dbd13375915bb7ab19c9f6cc85e73708b71b79fa8c424c8287e",
+      "package_path": "derivation_inputs/output/solid_combustion_evidence_20261115/models/comparison_payload.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/gas_combustion_evidence_20261115/models/comparison_payload.json",
+      "expected_sha256": "45e6e604922b07cae81c1cdc40d7f5f3cb0e0628019cb3ca77619592851dd8e7",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "45e6e604922b07cae81c1cdc40d7f5f3cb0e0628019cb3ca77619592851dd8e7",
+      "package_path": "derivation_inputs/output/gas_combustion_evidence_20261115/models/comparison_payload.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/gas_combustion_evidence_20261115/models/source_inputs.json",
+      "expected_sha256": "cdcbd74eaf589042c2e64b655841a7e650c47c0430a1b8f5441e09e3a48ec0c6",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "cdcbd74eaf589042c2e64b655841a7e650c47c0430a1b8f5441e09e3a48ec0c6",
+      "package_path": "derivation_inputs/output/gas_combustion_evidence_20261115/models/source_inputs.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/solid_combustion_evidence_20261115/models/reproduction_inputs.json",
+      "expected_sha256": "40a1e0d11a5ff1c7bfde476110f6cc16bf07fa798b650478b10765a29fef80bb",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "40a1e0d11a5ff1c7bfde476110f6cc16bf07fa798b650478b10765a29fef80bb",
+      "package_path": "derivation_inputs/output/solid_combustion_evidence_20261115/models/reproduction_inputs.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/earth_space_transfer_20261114/phase8_fire_safety_dashboard_20261114/local_source_manifest.json",
+      "expected_sha256": "b58d16bd8d33187356245c859392115adbdb5a21a653edb61b57b24be0e36661",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "b58d16bd8d33187356245c859392115adbdb5a21a653edb61b57b24be0e36661",
+      "package_path": "derivation_inputs/output/earth_space_transfer_20261114/phase8_fire_safety_dashboard_20261114/local_source_manifest.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/scene_evidence_integration_20261115/reviews/insights_solid.json",
+      "expected_sha256": "957b6f1aa1064d5b7f8c4314fe909afeb153e177c2683d600c10f0f49507b7e6",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "957b6f1aa1064d5b7f8c4314fe909afeb153e177c2683d600c10f0f49507b7e6",
+      "package_path": "derivation_inputs/output/scene_evidence_integration_20261115/reviews/insights_solid.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/scene_evidence_integration_20261115/reviews/insights_gas.json",
+      "expected_sha256": "059835aaf7c5408904559631fa31504828cb3d0889901be8efcb7e5935cc400a",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "059835aaf7c5408904559631fa31504828cb3d0889901be8efcb7e5935cc400a",
+      "package_path": "derivation_inputs/output/scene_evidence_integration_20261115/reviews/insights_gas.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/scene_evidence_integration_20261115/reviews/insights_liquid.json",
+      "expected_sha256": "a084f9990cbdf28bf5f168362451b83dfcd99b15024492684811ed0a38c681a3",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "a084f9990cbdf28bf5f168362451b83dfcd99b15024492684811ed0a38c681a3",
+      "package_path": "derivation_inputs/output/scene_evidence_integration_20261115/reviews/insights_liquid.json",
+      "matches_recorded_version": true
+    },
+    {
+      "source_relative_path": "output/scene_evidence_integration_20261115/reviews/insights_smoke.json",
+      "expected_sha256": "249fed293e8fa575af56595240122145fae4da8d0947d176c379c6ee71c491b0",
+      "role": "derived catalog, analysis input or annotation; not a raw measurement",
+      "status": "copied",
+      "sha256": "249fed293e8fa575af56595240122145fae4da8d0947d176c379c6ee71c491b0",
+      "package_path": "derivation_inputs/output/scene_evidence_integration_20261115/reviews/insights_smoke.json",
+      "matches_recorded_version": true
+    }
+  ],
+  "scope": "NASA source tables referenced by the current standardized CSV, not the complete instrument/video archive.",
+  "not_all_raw_instrument_data": true
+}

@@ -1,0 +1,11 @@
+{
+  "runtime_zip_sha256": "0efb65ed27158dbacf282c9118d2eecdbf560e568e3bf6047f4ba731da5930d0",
+  "documents": 370,
+  "charts": 29,
+  "raw_source_tables": 21,
+  "derived_analysis_inputs": 18,
+  "local_fulltext_source_ids": 21,
+  "local_unique_pdfs": 20,
+  "full_papers_in_github": false,
+  "not_complete_raw_instrument_archive": true
+}
