@@ -614,10 +614,10 @@
     },
     {
       "path": "frontend/workspace.js",
-      "bytes": 32425,
-      "sha256": "e989a17520900b43ec8f4cc166699c87bdf12ed2f4c5d6e49320430941c2d464",
+      "bytes": 32334,
+      "sha256": "1cc63115a75e55862525d6c8193d3137196f9bf7a5369db1ff2c1bffaf8becad",
       "origin": "copied_exact",
-      "source_sha256": "e989a17520900b43ec8f4cc166699c87bdf12ed2f4c5d6e49320430941c2d464",
+      "source_sha256": "1cc63115a75e55862525d6c8193d3137196f9bf7a5369db1ff2c1bffaf8becad",
       "source_name": "workspace.js"
     },
     {

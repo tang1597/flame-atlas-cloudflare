@@ -118,7 +118,7 @@
     "actual_service_tier": "fast",
     "end_to_end_seconds": 83.5,
     "synthesis_seconds": 59.488,
-    "standard_tier_retest": "pending",
+    "standard_tier_retest": "PASS; see concise_release",
     "scientific_quality_expert_review": "pending"
   },
   "paid_api_calls_scope": "0 refers to the offline relocated/package verification above; live acceptance below made paid API calls.",
@@ -129,6 +129,52 @@
     "targeted_markdown_tests": 6,
     "gateway_contracts": 9,
     "hot_container_profile": "concise-medium-v1",
-    "live_retest": "pending"
+    "live_retest": "PASS",
+    "live_result": {
+      "status": 200,
+      "seconds": 44.31,
+      "method": "openai_markdown_synthesis",
+      "generated": true,
+      "environment": "Isolated n-heptane droplets were tested in the ISS Multi-User Droplet Combustion Apparatus under microgravity.",
+      "answer": "N-heptane cool flames can persist after radiative hot-flame extinction, then undergo diffusive extinction. Because visible-flame loss does not establish burning cessation, suppression verification must distinguish continued liquid consumption from final cool-stage extinction.",
+      "word_count": 46,
+      "provider": {
+        "provider": "openai_responses",
+        "model": "gpt-6.1-sol",
+        "configured": true,
+        "credential_present": true,
+        "last_call_succeeded": true,
+        "last_error": null,
+        "training_performed": false,
+        "scientific_entailment_verified": false,
+        "reasoning_effort": "medium",
+        "requested_service_tier": "default",
+        "last_response_metadata": {
+          "model": "gpt-6.1-sol",
+          "requested_service_tier": "default",
+          "actual_service_tier": "default",
+          "latency_seconds": 12.869,
+          "input_tokens": 15994,
+          "output_tokens": 913
+        }
+      },
+      "papers": 12,
+      "charts": 10,
+      "markdown_sources": [
+        {
+          "id": "MD-da828422711c2b92",
+          "sha256": "da828422711c2b92a5f7747c07e95328cb497dede641cec95a6a11860ce81743"
+        }
+      ]
+    },
+    "ui_summary_rendered": true,
+    "ui_slider_check": {
+      "chart_id": "PEER-LIQ-PRF50-HF-EXPERIMENT_FIT",
+      "D0_mm_before": 2.28,
+      "K_avg_mm2_s_before": 0.64552,
+      "D0_mm_after": 4.8,
+      "K_avg_mm2_s_after": 0.428,
+      "status": "PASS"
+    }
   }
 }
