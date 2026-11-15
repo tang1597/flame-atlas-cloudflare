@@ -1,6 +1,6 @@
 # Flame Atlas — Cloudflare handoff
 
-Current frontend, retained Python backend, runtime datasets and dataset Markdown. The original research repository remains unchanged. Work is on `codex/initial-cloudflare-package`; use that branch for this handoff.
+Current frontend, retained Python backend, runtime datasets and dataset Markdown. The original research repository remains unchanged. The verified initial package is deployed from `main`.
 
 ## Included
 
@@ -19,7 +19,7 @@ python run.py --check --ai-mode off
 python run.py --port 8820
 ```
 
-Normal startup requires a server-side `OPENAI_API_KEY`. AI summary uses `gpt-6.1-sol`, max effort and Fast. It receives relevant source papers plus retrieved dataset Markdown, generates two concise query-level paragraphs, and validates source IDs, exact evidence spans and numeric claims. These checks are not proof of scientific entailment. API errors use an explicitly labeled reviewed fallback; live API quality/latency is not yet verified. `--ai-mode off` is only the explicit offline acceptance mode.
+Normal startup requires a server-side `OPENAI_API_KEY`. The Cloudflare deployment uses `gpt-6.1-sol`, max effort and the standard (`default`) service tier. It receives relevant source papers plus retrieved dataset Markdown, generates two concise query-level paragraphs, and validates source IDs, exact evidence spans and numeric claims. These checks are not proof of scientific entailment. API errors use an explicitly labeled reviewed fallback; A live n-heptane query successfully generated a Markdown-grounded summary; scientific answer quality still needs expert review. `--ai-mode off` is only the explicit offline acceptance mode.
 
 ## Cloudflare deployment target
 
@@ -34,13 +34,15 @@ npx wrangler secret put FLAME_PROXY_TOKEN
 npx wrangler deploy
 ```
 
-Enter secrets in the secret prompt/dashboard, never in source, browser JavaScript or chat. Use a newly generated random proxy token of at least 32 characters. The container must have Internet access for the OpenAI API. The supplied instance is standard-1 (4 GiB); account availability and billing must be checked before deployment. No paid plan, public deployment or API call was activated by preparing these files. Containers may need time to provision after a first deployment.
+Enter secrets in the secret prompt/dashboard, never in source, browser JavaScript or chat. Use a newly generated random proxy token of at least 32 characters. The container must have Internet access for the OpenAI API. The supplied instance is standard-1 (4 GiB); account availability and billing must be checked before deployment. The owner has activated Workers Paid and authorized deployment and API usage; secrets are held only in Cloudflare. Containers may need time to provision after a first deployment.
 
 The original 8793 physics helper and 8784 frozen semantic service were not listening at inventory time. Their old links remain in retained auxiliary pages, while the main workspace's charts and sliders use packaged data. Original full instrument archives, videos, model weights and credentials are excluded.
 
 ## Validation
 
-204 Python contracts, 55 JavaScript cases, 5 packaging contracts and 6 synthetic Cloudflare gateway contracts passed. Complete and split ZIPs produced identical relocated files. A new local instance loaded the 370-record index, liquid catalog, habitat/strategy routes and PMMA/heptane/smoke searches with linked numeric charts. See `VALIDATION.json`. Docker image construction, live Cloudflare provisioning and paid OpenAI calls remain unverified on this machine.
+204 Python contracts, 55 JavaScript cases, 5 packaging contracts and 6 synthetic Cloudflare gateway contracts passed. Complete and split ZIPs produced identical relocated files. A new local instance loaded the 370-record index, liquid catalog, habitat/strategy routes and PMMA/heptane/smoke searches with linked numeric charts. See `VALIDATION.json`. The Cloudflare build produced and deployed the Docker image successfully. The public app and data endpoints returned HTTP 200. A live n-heptane query returned 12 papers, 10 chart links and `openai_markdown_synthesis`, citing a dataset Markdown note. That pre-standard-switch Fast/max request took 83.5 seconds end to end (59.488 seconds synthesis). Standard-tier deployment acceptance is recorded separately when completed.
+
+Public demo: https://flame-atlas.hank098173.workers.dev/
 
 ## Official deployment references
 

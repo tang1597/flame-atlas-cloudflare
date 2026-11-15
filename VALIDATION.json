@@ -101,6 +101,25 @@
   "javascript_cases": 55,
   "packaging_contracts": 5,
   "cloudflare_mock_contracts": 6,
-  "live_cloudflare": false,
-  "live_openai": false
+  "live_cloudflare": true,
+  "live_openai": true,
+  "live_acceptance": {
+    "public_url": "https://flame-atlas.hank098173.workers.dev/",
+    "docker_image_built": true,
+    "query": "n-heptane cool flame extinction",
+    "documents": 12,
+    "linked_charts": 10,
+    "method": "openai_markdown_synthesis",
+    "generated": true,
+    "markdown_sources": 1,
+    "last_call_succeeded": true,
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max",
+    "actual_service_tier": "fast",
+    "end_to_end_seconds": 83.5,
+    "synthesis_seconds": 59.488,
+    "standard_tier_retest": "pending",
+    "scientific_quality_expert_review": "pending"
+  },
+  "paid_api_calls_scope": "0 refers to the offline relocated/package verification above; live acceptance below made paid API calls."
 }

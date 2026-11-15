@@ -10,7 +10,7 @@ export class FlameContainer extends DurableObject {
       container.start({image: container.images.base, instance: 'standard-1', enableInternet: true,
         env: {OPENAI_API_KEY: this.env.OPENAI_API_KEY, FLAME_PROXY_TOKEN: this.env.FLAME_PROXY_TOKEN,
           NASA_AI_PROVIDER: 'openai', NASA_AI_MODEL: 'gpt-6.1-sol',
-          NASA_OPENAI_REASONING_EFFORT: 'max', NASA_OPENAI_SERVICE_TIER: 'fast'}});
+          NASA_OPENAI_REASONING_EFFORT: 'max', NASA_OPENAI_SERVICE_TIER: 'default'}});
     }
     await container.setInactivityTimeout(300000);
     for (let attempt = 0; attempt < 100; attempt++) {

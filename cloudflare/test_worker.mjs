@@ -23,6 +23,8 @@ assert.equal((await object.fetch(new Request('https://demo.test/'))).status,200)
 assert.equal(started.enableInternet,true);
 assert.equal(started.env.OPENAI_API_KEY,'synthetic-key');
 assert.equal(started.env.NASA_AI_MODEL,'gpt-6.1-sol');
+assert.equal(started.env.NASA_OPENAI_REASONING_EFFORT,'max');
+assert.equal(started.env.NASA_OPENAI_SERVICE_TIER,'default');
 assert.equal(forwarded.headers.get('X-Flame-Proxy-Token'),env.FLAME_PROXY_TOKEN);
 assert.equal(forwarded.headers.get('Origin'),null);
 console.log(JSON.stringify({status:'PASS',contracts:6,live_cloudflare:false,live_openai:false}));
