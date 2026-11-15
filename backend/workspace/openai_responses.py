@@ -20,6 +20,10 @@ def _responses_schema(schema):
 
 def build_request(chat_request, config):
     """Keep the existing evidence contract, using the selected Sol API settings."""
+    # Reserved internal stage setting; query text remains inside message data.
+    effort = chat_request.get('_reasoning_effort', config.reasoning_effort)
+    if effort not in {'low', 'medium', 'high', 'xhigh', 'max'}:
+        raise ValueError('unsupported_reasoning_effort_override')
     response_format = chat_request.get('response_format', {'type': 'json_object'})
     if response_format['type'] == 'json_schema':
         spec = response_format['json_schema']
@@ -36,7 +40,7 @@ def build_request(chat_request, config):
             content = content.removesuffix(' /no_think')
         messages.append({'role': message['role'], 'content': content})
     return {'model': config.model, 'input': messages,
-            'reasoning': {'effort': config.reasoning_effort},
+            'reasoning': {'effort': effort},
             'service_tier': config.service_tier,
             # Reasoning and visible output share this budget. The old local
             # model's small visible-output budget is insufficient for max effort.
@@ -90,6 +94,7 @@ class OpenAIResponsesTransport:
         candidate = parse_response(raw)
         usage = raw.get('usage') or {}
         self.metadata = {'model': raw.get('model'),
+                         'reasoning_effort': body['reasoning']['effort'],
                          'requested_service_tier': self.config.service_tier,
                          'actual_service_tier': raw.get('service_tier'),
                          'latency_seconds': round(time.monotonic() - started, 3),

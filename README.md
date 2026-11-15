@@ -19,7 +19,7 @@ python run.py --check --ai-mode off
 python run.py --port 8820
 ```
 
-Normal startup requires a server-side `OPENAI_API_KEY`. The Cloudflare deployment uses `gpt-6.1-sol`, medium reasoning effort for concise answers and the standard (`default`) service tier. It receives relevant source papers plus retrieved dataset Markdown, generates two concise query-level paragraphs, and validates source IDs, exact evidence spans and numeric claims. These checks are not proof of scientific entailment. API errors use an explicitly labeled reviewed fallback. A live n-heptane query successfully generated a Markdown-grounded summary; scientific answer quality still needs expert review. `--ai-mode off` is only the explicit offline acceptance mode.
+Normal startup requires a server-side `OPENAI_API_KEY`. The Cloudflare deployment uses `gpt-6.1-sol`, medium reasoning effort for concise answers and the standard (`default`) service tier. Query rewriting uses low effort while answer synthesis remains medium. Validated query plans and summaries use separate bounded five-minute in-memory caches. Synthesis receives six relevant source records (eight for comparison questions) plus up to three retrieved dataset Markdown excerpts, generates two concise query-level paragraphs, and validates source IDs, exact evidence spans and numeric claims. These checks are not proof of scientific entailment. API errors use an explicitly labeled reviewed fallback. A live n-heptane query successfully generated a Markdown-grounded summary; scientific answer quality still needs expert review. `--ai-mode off` is only the explicit offline acceptance mode.
 
 ## Cloudflare deployment target
 

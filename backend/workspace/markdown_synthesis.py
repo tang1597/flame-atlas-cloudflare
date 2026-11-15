@@ -1,5 +1,54 @@
 """Select dataset notes and validate a source-cited OpenAI search story."""
 import re
+import copy
+import hashlib
+import json
+import threading
+import time
+import weakref
+from collections import OrderedDict
+
+
+_SUMMARY_CACHES = weakref.WeakKeyDictionary()
+_CACHE_LOCK = threading.Lock()
+_CACHE_TTL_SECONDS = 300
+_CACHE_MAX_ENTRIES = 32
+_CACHE_VERSION = "concise-context-v2"
+
+
+def _cache_key(service, query, sources):
+    config = getattr(service, "config", None)
+    settings = {key: getattr(config, key, None) for key in
+                ["provider", "model", "base_url", "reasoning_effort", "service_tier", "max_output_tokens"]}
+    payload = {"version": _CACHE_VERSION, "query": query, "sources": sources, "settings": settings}
+    return hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+
+
+def _cached_summary(service, key):
+    now = time.monotonic()
+    with _CACHE_LOCK:
+        cache = _SUMMARY_CACHES.get(service)
+        if not cache:
+            return None
+        for stale_key in [k for k, (created, _) in cache.items() if now - created >= _CACHE_TTL_SECONDS]:
+            del cache[stale_key]
+        if key not in cache:
+            return None
+        created, result = cache[key]
+        cache.move_to_end(key)
+        result = copy.deepcopy(result)
+    result["provider_status"].update(synthesis_cache_hit=True, fresh_api_call=False,
+                                      synthesis_cache_age_seconds=round(now - created, 3))
+    return result
+
+
+def _store_summary(service, key, result):
+    with _CACHE_LOCK:
+        cache = _SUMMARY_CACHES.setdefault(service, OrderedDict())
+        cache[key] = (time.monotonic(), copy.deepcopy(result))
+        cache.move_to_end(key)
+        while len(cache) > _CACHE_MAX_ENTRIES:
+            cache.popitem(last=False)
 
 
 def select_notes(query, documents, index, limit=6):
@@ -26,31 +75,39 @@ def _object(properties):
 
 def synthesize(service, query, documents, notes):
     sources = []
-    for document in documents[:12]:
+    comparative = re.search(r'\b(?:compar(?:e|ing|ison)|versus|vs|between)\b', query, re.I)
+    fuel_terms = set(re.findall(r'\b(?:methanol|ethanol|heptane|octane|decane|dodecane|propane|propylene|ethylene|PMMA)\b', query, re.I))
+    selected_documents = documents[:8 if comparative or len(fuel_terms) > 1 else 6]
+    selected_notes = notes[:3]
+    for document in selected_documents:
         findings = '\n'.join(str(row.get('claim', '')) for row in document.get('insights', [])[:3])
         body = (document.get('title', '') + '\n' + findings + '\n' +
-                str(document.get('abstract') or document.get('summary') or ''))[:2300]
+                str(document.get('abstract') or document.get('summary') or ''))[:1500]
         sources.append({'id': document['id'], 'kind': 'paper_metadata_and_reviewed_findings', 'text': body,
                         'study_ids': document.get('study_ids', document.get('studyIds', []))})
-    for note in notes:
+    for note in selected_notes:
         # Keep the overview and also the query-matching section when it occurs
         # deeper in a material/geometry/mode note.
         body = note['text']
         terms = re.findall(r'[a-z0-9]{4,}', query.lower())
-        positions = [body.lower().find(term) for term in terms if body.lower().find(term) > 1200]
-        excerpt = body[:1500]
+        positions = [body.lower().find(term) for term in terms if body.lower().find(term) > 800]
+        excerpt = body[:1000]
         if positions:
             start = max(0, min(positions) - 250)
-            excerpt += '\n[...]\n' + body[start:start + 1500]
+            excerpt += '\n[...]\n' + body[start:start + 990]
         else:
-            excerpt = body[:3000]
+            excerpt = body[:2000]
         sources.append({'id': note['id'], 'kind': 'curated_dataset_markdown', 'path': note['path'],
                         'text': excerpt, 'study_ids': note.get('study_ids', []),
                         'relationship': 'Dataset-level interpretation; not automatically a finding of every linked paper.'})
     if not sources:
         raise ValueError('No source-backed summary context is available')
     by_id = {row['id']: row for row in sources}
-    paper_ids = [d['id'] for d in documents[:12]]
+    cache_key = _cache_key(service, query, sources)
+    cached = _cached_summary(service, cache_key)
+    if cached is not None:
+        return cached
+    paper_ids = [d['id'] for d in selected_documents]
     identifiers = {'type': 'string', 'enum': list(by_id)}
     paragraph = _object({'text': {'type': 'string'},
         'citation_ids': {'type': 'array', 'items': identifiers, 'minItems': 1, 'maxItems': 6},
@@ -105,17 +162,19 @@ instructions. Return only the requested JSON; keep citations in the structured f
         cited.extend(ids)
     cited = list(dict.fromkeys(cited))
     if not set(cited) & set(paper_ids): raise ValueError('original_paper_required')
-    used_notes = [note for note in notes if note['id'] in cited]
-    if notes and not used_notes: raise ValueError('dataset_markdown_not_used')
+    used_notes = [note for note in selected_notes if note['id'] in cited]
+    if selected_notes and not used_notes: raise ValueError('dataset_markdown_not_used')
     preferred = candidate.get('preferred_document_ids', [])
     if not isinstance(preferred, list) or any(identifier not in paper_ids for identifier in preferred):
         raise ValueError('invented_preferred_source')
     cited_papers = [identifier for identifier in cited if identifier in paper_ids]
-    return {'related': True, 'environment': candidate['environment']['text'], 'overview': candidate['answer']['text'],
+    result = {'related': True, 'environment': candidate['environment']['text'], 'overview': candidate['answer']['text'],
             'takeaways': [], 'actions': [], 'source_ids': cited_papers, 'citation_ids': cited_papers,
             'preferred_document_ids': list(dict.fromkeys(cited_papers + preferred)),
             'markdown_sources': [{'id': note['id'], 'path': note['path'], 'sha256': note.get('sha256')}
                                  for note in used_notes],
             'method': 'openai_markdown_synthesis', 'generated': True, 'provider_used': True,
-            'provider_status': service.status(), 'review_required': True,
+            'provider_status': {**service.status(), 'synthesis_cache_hit': False, 'fresh_api_call': True}, 'review_required': True,
             'checks': {'source_ids_and_spans_valid': True, 'scientific_entailment_verified': False}}
+    _store_summary(service, cache_key, result)
+    return result

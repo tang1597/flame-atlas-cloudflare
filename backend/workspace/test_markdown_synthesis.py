@@ -1,5 +1,8 @@
 import copy
 import unittest
+import sys
+from types import SimpleNamespace
+from unittest import mock
 try:
     from .markdown_synthesis import select_notes, synthesize
 except ImportError:
@@ -22,12 +25,59 @@ def answer():
 
 
 class Service:
-    def __init__(self, candidate): self.candidate = candidate; self.payload = None
-    def _call(self, prompt, payload, *args): self.payload = payload; return self.candidate
+    def __init__(self, candidate): self.candidate = candidate; self.payload = None; self.calls = 0
+    def _call(self, prompt, payload, *args): self.payload = payload; self.calls += 1; return self.candidate
     def status(self): return {'provider': 'openai_responses', 'model': 'gpt-6.1-sol'}
 
 
 class MarkdownSummaryTests(unittest.TestCase):
+    def test_context_is_bounded_without_changing_exact_citation_spans(self):
+        documents = [*DOCS, *[{**DOCS[0], 'id': 'paper-' + str(i), 'abstract': 'Synthetic ' * 500} for i in range(9)]]
+        notes = [*NOTES, *[{**NOTES[0], 'id': 'MD-' + str(i), 'text': 'Synthetic ' * 500} for i in range(5)]]
+        service = Service(answer())
+        synthesize(service, 'PMMA extinction', documents, notes)
+        papers = [s for s in service.payload['sources'] if s['kind'] == 'paper_metadata_and_reviewed_findings']
+        markdown = [s for s in service.payload['sources'] if s['kind'] == 'curated_dataset_markdown']
+        self.assertEqual(len(papers), 6)
+        self.assertEqual(len(markdown), 3)
+        self.assertTrue(all(len(s['text']) <= 1500 for s in papers))
+        self.assertTrue(all(len(s['text']) <= 2000 for s in markdown))
+        self.assertIn(DOCS[0]['abstract'], papers[0]['text'])
+        synthesize(service, 'Compare PMMA extinction across conditions', documents, notes)
+        self.assertEqual(sum(s['kind'] == 'paper_metadata_and_reviewed_findings' for s in service.payload['sources']), 8)
+
+    def test_validated_cache_isolated_by_query_source_and_model(self):
+        service = Service(answer())
+        result = synthesize(service, 'PMMA extinction', DOCS, NOTES)
+        self.assertFalse(result['provider_status']['synthesis_cache_hit'])
+        result['overview'] = 'mutated by caller'
+        cached = synthesize(service, 'PMMA extinction', DOCS, NOTES)
+        self.assertEqual(service.calls, 1)
+        self.assertNotEqual(cached['overview'], 'mutated by caller')
+        self.assertTrue(cached['provider_status']['synthesis_cache_hit'])
+        self.assertFalse(cached['provider_status']['fresh_api_call'])
+        synthesize(service, 'PMMA suppression', DOCS, NOTES)
+        changed = copy.deepcopy(DOCS); changed[0]['abstract'] += ' Additional measured condition.'
+        synthesize(service, 'PMMA extinction', changed, NOTES)
+        service.config = SimpleNamespace(model='different-synthetic-model', reasoning_effort='medium')
+        synthesize(service, 'PMMA extinction', DOCS, NOTES)
+        self.assertEqual(service.calls, 4)
+
+    def test_rejected_summary_is_never_cached_and_cache_expires(self):
+        service = Service(answer())
+        service.candidate['answer']['evidence_spans'][0]['text'] = 'A fabricated source sentence.'
+        with self.assertRaises(ValueError):
+            synthesize(service, 'PMMA extinction', DOCS, NOTES)
+        service.candidate = answer()
+        module = sys.modules[synthesize.__module__]
+        with mock.patch.object(module.time, 'monotonic', return_value=100):
+            synthesize(service, 'PMMA extinction', DOCS, NOTES)
+            synthesize(service, 'PMMA extinction', DOCS, NOTES)
+        self.assertEqual(service.calls, 2)
+        with mock.patch.object(module.time, 'monotonic', return_value=401):
+            synthesize(service, 'PMMA extinction', DOCS, NOTES)
+        self.assertEqual(service.calls, 3)
+
     def test_openai_service_routes_summary_through_markdown_generation(self):
         try:
             from .ai_service import AIConfig, AIService

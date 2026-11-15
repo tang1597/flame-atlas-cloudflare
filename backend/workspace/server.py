@@ -193,7 +193,7 @@ def integrated_handler(base_handler):
                 return self.send_json({'error': 'Unexpected query parameters'}, 400)
             if path in {'/api/workspace/status', '/api/status'}:
                 return self.send_json({'version': '0.10.3', 'layout': 'question-story-evidence',
-                    'status': 'ready', 'training_stopped': True,
+                    'status': 'ready', 'build_marker': 'summary-latency-20261115', 'training_stopped': True,
                     'semantic_retrieval': 'Configured existing frozen service; availability is reported per legacy search',
                     'physics_demo_url': self.server.physics_url,
                     'evidence_file_present': self.server.chains_path.is_file(),

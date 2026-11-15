@@ -100,10 +100,10 @@
     },
     {
       "path": "backend/workspace/ai_service.py",
-      "bytes": 46075,
-      "sha256": "c793442bd285eedf045bedec4a491856779410958778f56a65d831104d7aef42",
+      "bytes": 47688,
+      "sha256": "d93c1d3be7c1767e801d4359de717f2c087d64332b6a0164e56c8e868293167d",
       "origin": "copied_exact",
-      "source_sha256": "c793442bd285eedf045bedec4a491856779410958778f56a65d831104d7aef42",
+      "source_sha256": "d93c1d3be7c1767e801d4359de717f2c087d64332b6a0164e56c8e868293167d",
       "source_name": "ai_service.py"
     },
     {
@@ -116,10 +116,10 @@
     },
     {
       "path": "backend/workspace/markdown_synthesis.py",
-      "bytes": 8410,
-      "sha256": "ee462c3a0b08a2d3f7084ebe2092b3779124ddf62527680b093a3f1a65c76372",
+      "bytes": 10797,
+      "sha256": "ec571b5ede9ec9dcb03a758cc7717e319451fdf4e46a148ea16e7121dc524793",
       "origin": "copied_exact",
-      "source_sha256": "ee462c3a0b08a2d3f7084ebe2092b3779124ddf62527680b093a3f1a65c76372",
+      "source_sha256": "ec571b5ede9ec9dcb03a758cc7717e319451fdf4e46a148ea16e7121dc524793",
       "source_name": "markdown_synthesis.py"
     },
     {
@@ -132,10 +132,10 @@
     },
     {
       "path": "backend/workspace/openai_responses.py",
-      "bytes": 4623,
-      "sha256": "088d17d31bc8cabb1f6bee859f0ba882e6f9c50fa5f22a57fb4ce40ac16c1598",
+      "bytes": 4965,
+      "sha256": "d51b952076228ae795d551a51c293c03dbb5615b7635980b48f870414cb2583d",
       "origin": "copied_exact",
-      "source_sha256": "088d17d31bc8cabb1f6bee859f0ba882e6f9c50fa5f22a57fb4ce40ac16c1598",
+      "source_sha256": "d51b952076228ae795d551a51c293c03dbb5615b7635980b48f870414cb2583d",
       "source_name": "openai_responses.py"
     },
     {
@@ -172,10 +172,10 @@
     },
     {
       "path": "backend/workspace/server.py",
-      "bytes": 18006,
-      "sha256": "b805ca832cc8e22892ded545e6aecbb22599c1c2e46ceda44d2a952ace1cf857",
+      "bytes": 18050,
+      "sha256": "a256ffb4388a48b41cf7ff3b4ba1ff2eb852a642eb9844db7872b05bf5d6de00",
       "origin": "copied_exact",
-      "source_sha256": "b805ca832cc8e22892ded545e6aecbb22599c1c2e46ceda44d2a952ace1cf857",
+      "source_sha256": "a256ffb4388a48b41cf7ff3b4ba1ff2eb852a642eb9844db7872b05bf5d6de00",
       "source_name": "server.py"
     },
     {

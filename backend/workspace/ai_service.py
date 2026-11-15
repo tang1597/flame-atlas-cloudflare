@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from difflib import get_close_matches
+import copy
 import json
 import os
 import re
@@ -395,6 +396,8 @@ class AIService:
         self._lock = threading.Lock()
         self._last_error = None
         self._last_success = None
+        self._query_cache = {}
+        self._query_cache_lock = threading.Lock()
 
     @classmethod
     def from_environment(cls):
@@ -412,12 +415,18 @@ class AIService:
                           last_response_metadata=getattr(self._transport, 'metadata', None))
         return result
 
-    def _call(self, system, payload, max_tokens, schema=None):
+    def _call(self, system, payload, max_tokens, schema=None, *, reasoning_effort=None):
         request = {'model': self.config.model, 'messages': [
             {'role': 'system', 'content': SCOPE_SYSTEM_RULE + '\n\n' + system},
             {'role': 'user', 'content': json.dumps(payload, ensure_ascii=False)}],
             'temperature': 0, 'max_tokens': max_tokens, 'stream': False,
             'response_format': {'type': 'json_object'}}
+        # This optional setting is supplied by internal stage code, never copied
+        # from user query data. Answer synthesis keeps the configured effort.
+        if reasoning_effort is not None and self.config.provider == 'openai_responses':
+            if reasoning_effort not in {'low', 'medium', 'high', 'xhigh', 'max'}:
+                raise ValueError('unsupported_reasoning_effort_override')
+            request['_reasoning_effort'] = reasoning_effort
         if schema is not None:
             request['response_format'] = {'type': 'json_schema', 'json_schema': {
                 'name': 'scene_evidence_response', 'strict': True, 'schema': schema}}
@@ -469,6 +478,15 @@ class AIService:
             return {'related': False, 'response': UNRELATED_REPLY, 'interpreted_query': original,
                     'search_queries': [], 'question_focus': '', 'protected_terms': _protected_terms(original),
                     'keywords': [], 'fire_type_hint': None, 'method': 'scope_refusal', 'provider_status': self.status()}
+        cache_key = (id(self.config), original)
+        if self.config.provider == 'openai_responses':
+            with self._query_cache_lock:
+                cached = self._query_cache.get(cache_key)
+                if cached and time.monotonic() - cached[0] < 300:
+                    result = copy.deepcopy(cached[1])
+                    result['provider_status']['query_cache_hit'] = True
+                    return result
+                self._query_cache.pop(cache_key, None)
         prompt = '''First understand the question, then plan a literature search, not an experiment.
 Return JSON only: related (boolean), interpreted_query (corrected concise English query),
 question_focus (one short research question), search_queries (one to four distinct focused
@@ -497,7 +515,8 @@ Hints classify explicit wording only and do not change the selected scene. /no_t
             query_schema = QUERY_SCHEMA if (self.config.provider != 'existing_local_qwen'
                 or re.search(r'[\u3400-\u9fff]', original)) else None
             candidate = self._call(prompt, {'original': original, 'conservative_spelling': fixed,
-                'protected_terms': _protected_terms(fixed)}, 650, query_schema)
+                'protected_terms': _protected_terms(fixed)}, 650, query_schema,
+                reasoning_effort='low' if self.config.provider == 'openai_responses' else None)
             if candidate.get('related') is False:
                 if _technical_context(fixed):
                     raise ValueError('combustion_query_incorrectly_rejected')
@@ -543,7 +562,7 @@ Hints classify explicit wording only and do not change the selected scene. /no_t
                 focus = query
             if not queries:
                 raise ValueError('no_supported_search_branches')
-            return {'related': True, 'response': '', 'interpreted_query': query.strip(),
+            result = {'related': True, 'response': '', 'interpreted_query': query.strip(),
                     'question_focus': focus.strip(), 'search_queries': list(dict.fromkeys(value.strip() for value in queries)),
                     'protected_terms': _protected_terms(fixed), 'search_plan_method': 'api_question_plan',
                     'spelling_normalized_query': fixed,
@@ -552,6 +571,13 @@ Hints classify explicit wording only and do not change the selected scene. /no_t
                                     'question_focus_replaced': focus_replaced},
                     'keywords': words[:10], 'fire_type_hint': hint, 'method': 'api_interpreted_query',
                     'original_query': original, 'provider_status': self.status()}
+            if self.config.provider == 'openai_responses':
+                result['provider_status']['query_cache_hit'] = False
+                with self._query_cache_lock:
+                    self._query_cache[cache_key] = (time.monotonic(), copy.deepcopy(result))
+                    while len(self._query_cache) > 32:
+                        self._query_cache.pop(next(iter(self._query_cache)))
+            return result
         except Exception as error:
             return {'related': True, 'response': '', 'original_query': original,
                     'interpreted_query': fixed, 'keywords': _keywords(fixed),
