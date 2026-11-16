@@ -454,11 +454,12 @@
     },
     {
       "path": "frontend/atlas.html",
-      "bytes": 9306,
-      "sha256": "35ff8105664a98c0da4cceed94a1ec07d45ca5149271d0f5a50960cfe2402e5f",
-      "origin": "copied_exact",
+      "bytes": 9487,
+      "sha256": "95803fe1f00292768f0b1d616857e274028abc1a9e386ff06b8cbcd57bfba844",
+      "origin": "transformed",
       "source_sha256": "35ff8105664a98c0da4cceed94a1ec07d45ca5149271d0f5a50960cfe2402e5f",
-      "source_name": "atlas.html"
+      "source_name": "atlas.html",
+      "transformation": "Add the connected GitHub repository link to the footer; preserve existing content."
     },
     {
       "path": "frontend/atlas.js",

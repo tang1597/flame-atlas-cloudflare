@@ -54,3 +54,7 @@ Current speed release: the same live query completed in 19.281 seconds, then 4.4
 - https://developers.openai.com/api/docs/models/gpt-6.1-sol
 
 This independent project does not represent NASA's views or imply NASA endorsement.
+
+## License
+
+Original Flame Atlas software is available under the [MIT License](LICENSE). NASA data, publication excerpts, fonts and other third-party materials retain their respective terms; see [source notices](SOURCE_NOTICES.md).
