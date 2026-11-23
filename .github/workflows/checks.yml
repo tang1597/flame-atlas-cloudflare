@@ -18,3 +18,36 @@ jobs:
       - run: python run.py --check --ai-mode off
       - run: python -m compileall -q backend cloudflare run.py prepare_data.py
       - run: node cloudflare/test_worker.mjs
+
+  verify-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Confirm both public application routes return 404 or 410
+        run: |
+          python3 - <<'PY'
+          import json
+          import time
+          import urllib.request
+          import urllib.error
+          base = 'https://flame-atlas.hank098173.workers.dev'
+          for attempt in range(12):
+              results = []
+              for path in ('/', '/api/status'):
+                  request = urllib.request.Request(base + path,
+                      headers={'User-Agent': 'FlameAtlas-Owner-Shutdown-Verification/1.0',
+                               'Cache-Control': 'no-cache'})
+                  try:
+                      with urllib.request.urlopen(request, timeout=10) as response:
+                          results.append({'path': path, 'status': response.status})
+                  except urllib.error.HTTPError as error:
+                      results.append({'path': path, 'status': error.code})
+                  except Exception as error:
+                      results.append({'path': path, 'error': type(error).__name__})
+              print(json.dumps({'attempt': attempt + 1, 'results': results}), flush=True)
+              if all(item.get('status') in (404, 410) for item in results):
+                  print('Verified website and API are offline.', flush=True)
+                  raise SystemExit(0)
+              time.sleep(10)
+          raise SystemExit('Public takedown could not be confirmed.')
+          PY
