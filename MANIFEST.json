@@ -454,12 +454,11 @@
     },
     {
       "path": "frontend/atlas.html",
-      "bytes": 9487,
-      "sha256": "95803fe1f00292768f0b1d616857e274028abc1a9e386ff06b8cbcd57bfba844",
-      "origin": "transformed",
+      "bytes": 9306,
+      "sha256": "35ff8105664a98c0da4cceed94a1ec07d45ca5149271d0f5a50960cfe2402e5f",
+      "origin": "copied_exact",
       "source_sha256": "35ff8105664a98c0da4cceed94a1ec07d45ca5149271d0f5a50960cfe2402e5f",
-      "source_name": "atlas.html",
-      "transformation": "Add the connected GitHub repository link to the footer; preserve existing content."
+      "source_name": "atlas.html"
     },
     {
       "path": "frontend/atlas.js",
@@ -615,10 +614,10 @@
     },
     {
       "path": "frontend/workspace.js",
-      "bytes": 32588,
-      "sha256": "227fcd587fe688cb28809dc31205eaad05fe97a75fa8e6c330c912988e0a5da7",
+      "bytes": 32334,
+      "sha256": "1cc63115a75e55862525d6c8193d3137196f9bf7a5369db1ff2c1bffaf8becad",
       "origin": "copied_exact",
-      "source_sha256": "227fcd587fe688cb28809dc31205eaad05fe97a75fa8e6c330c912988e0a5da7",
+      "source_sha256": "1cc63115a75e55862525d6c8193d3137196f9bf7a5369db1ff2c1bffaf8becad",
       "source_name": "workspace.js"
     },
     {
